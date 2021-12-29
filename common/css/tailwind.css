@@ -90,7 +90,8 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr[title] {
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -521,14 +522,6 @@ video {
   display: table;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
 .resize {
   resize: both;
 }
@@ -622,39 +615,16 @@ video {
   }
 }
 
-.btn {
-  border-radius: 0.25rem;
-  font-weight: 700;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  >p{
-    border-radius: 0.25rem;
-    font-weight: 700;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
 @media (min-width: 640px) {
 }
 
 @media (min-width: 768px) {
-  .md\:p-8 {
-    padding: 2rem;
-  }
 }
 
 @media (min-width: 1024px) {
 }
 
 @media (min-width: 1280px) {
-  .xl\:p-6 {
-    padding: 1.5rem;
-  }
 }
 
 @media (min-width: 1536px) {

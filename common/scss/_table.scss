@@ -69,10 +69,10 @@
 
         tbody {
             text-align: center;
-
-            tr:nth-child(even) {
-                background-color: $color-white;
-            }
+            background-color: $color-white;
+            // tr:nth-child(even) {
+            //     background-color: $color-white;
+            // }
         }
     }
 
@@ -109,6 +109,7 @@
     * 表格（Swipetable，手機版有左右滾動條的那種）
     * ==========================================================================
     */
+
 
     .swipeTable {
         width: 100%;
