@@ -1,14 +1,34 @@
 @charset "UTF-8";
 @import "./utils/_utils.scss";
 
+// * ==========================================================================
+// * HEADER 區塊
+// * ==========================================================================
 
+header {
+  position: fixed;
+  width: 60px;
+  height: 100%;
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.05);
+}
 
-    // * ==========================================================================
-    // * HEADER 區塊
-    // * ==========================================================================
+.mainheader {
 
+}
 
-		header{
-			width: 60px;
+.home-icon {
+}
+
+.mainheader-menu {
+
+  > li {
+		margin: 0 auto;
+    writing-mode: vertical-rl;
+
+		>a{
+			width: 100%;
 			height: 100%;
+			display: block;
 		}
+  }
+}
