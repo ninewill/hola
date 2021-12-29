@@ -19,8 +19,11 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      willColor: "#f00",
+			
+			//主要顏色
+			bg_gray1: "#F5F5F5",
 
+			
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
