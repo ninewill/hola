@@ -13,58 +13,102 @@ header {
 }
 
 .mainheader {
-
 }
 
+
 .home-icon {
-	width: 24px;
-	height: 24px;
-	margin: 0 auto;
-	margin-top: 100px;
-	display: block;
-	background: url("../images/icon/Home/Normal.svg") no-repeat center/cover;
-	transition:  0.6s cubic-bezier(0.25, 1, 0.5, 1);
-	cursor: pointer;
-	@include hidetext;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: block;
+  background: url("../images/icon/Home/Normal.svg") no-repeat center/cover;
+  transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  @include hidetext;
 
-	//當前頁面狀態
-	&.current{
-		background: url("../images/icon/Home/Pessed.svg") no-repeat center/cover;
+  //首頁當前頁面狀態
+  &.current {
+    background: url("../images/icon/Home/Pessed.svg") no-repeat center/cover;
 
-		@include min-width(1025px) {
-			&:hover{
-				background: url("../images/icon/Home/Pessed.svg") no-repeat center/cover;
-			}
-		}
-	}
+    @include min-width(1025px) {
+      &:hover {
+        background: url("../images/icon/Home/Pessed.svg") no-repeat center/cover;
+      }
+    }
+  }
 
-	@include min-width(1025px) {
-		&:hover{
-			background: url("../images/icon/Home/Hover.svg") no-repeat center/cover;
-		}
-	}
-	
+  @include min-width(1025px) {
+    &:hover {
+      background: url("../images/icon/Home/Hover.svg") no-repeat center/cover;
+    }
+  }
 }
 
 .mainheader-menu {
-	margin-top: 64px;
+  margin-top: 64px;
 
   > li {
-		margin: 0 auto;
-		margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 40px;
     writing-mode: vertical-rl;
 
-		&:last-child{
-			margin-bottom: 0;
-		}
-		
+    &:last-child {
+      margin-bottom: 0;
 
-		>a{
-			width: 100%;
-			height: 100%;
-			display: block;
-			letter-spacing: 5px;
-			color: $color-primary-2;
+			&:after {
+				display: none;
+			}
+    }
+
+    //其他分頁當前頁面狀態
+    &.current {
+
+			&:before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				position: absolute;
+				top: -6px;
+				right: -6px;
+				background-color: $color-primary-1;;
+			}
+
+			>a{
+				color: $color-primary-1;
+			}
+    }
+
+		@include min-width(1025px) {
+			&:hover {
+				>a{
+					color: $color-primary-1;
+				}
+			}
 		}
+
+    &:after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      bottom: -25px;
+      display: block;
+      background: url("../images/icon/Pattern/Star.svg") no-repeat center/cover;
+    }
+
+    > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      letter-spacing: 5px;
+      color: $color-primary-2;
+			transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
   }
 }

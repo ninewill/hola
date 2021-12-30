@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+// * ==========================================================================
+// * BUTTON 區塊
+// * ==========================================================================
+
+
+.soshow-media-btn{
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+.icon-youtube{
+	background: url("../images/icon/YouTube/Normal.svg") no-repeat center/cover;
+	@include hidetext;
+}
+
+.icon-share{
+	background: url("../images/icon/Share/Default.svg") no-repeat center/cover;
+	@include hidetext;
+}
+
+.icon-gift{
+	background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
+	@include hidetext;
+}

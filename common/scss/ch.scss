@@ -18,6 +18,8 @@
 @import "./_banner.scss";
 
 // * 引入內容區塊與網頁元件的 CSS
+@import "./_index.scss";
+
 @import "./_content.scss";
 
 @import "./_grid.scss";
@@ -29,6 +31,8 @@
 @import "./_iframe.scss";
 
 @import "./_carousel.scss";
+
+@import "./_btn.scss";
 
 // * 引入套件的 CSS
 @import "./plugins/_lightgallery.scss";

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+// * ==========================================================================
+// * Index 區塊
+// * ==========================================================================
+
+.main-top-bar{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.main-top-bar-title{
+	>.h2{
+		width: 144px;
+		height: 54px;
+		background: url("../images/icon/Logo/Normal.svg") no-repeat center/cover;
+		@include hidetext;
+	}
+
+	.label{
+		margin-top: 35px;
+		padding: 0.2rem;
+		border: 2px solid $color-primary-1;
+		border-radius: 5px;
+		color: $color-primary-1;
+		text-align: center;
+		font-weight: bold;
+		font-size: 14px;
+	}
+}
