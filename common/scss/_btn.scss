@@ -5,24 +5,140 @@
 // * BUTTON 區塊
 // * ==========================================================================
 
-
-.soshow-media-btn{
-	width: 40px;
-	height: 40px;
-	display: block;
+.soshow-media-btn {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
+.icon-youtube {
+  background: url("../images/icon/YouTube/Normal.svg") no-repeat center/cover;
+  @include hidetext;
+}
+
+.icon-share {
+	position: relative;
+  background: url("../images/icon/Share/Default.svg") no-repeat center/cover;
+  @include hidetext1;
+}
+
+.icon-facebook {
+	position: relative;
+  background: url("../images/icon/Facebook/Normal.svg") no-repeat center/cover;
+  @include hidetext;
+}
+
+.icon-line {
+  background: url("../images/icon/Line/Normal.svg") no-repeat center/cover;
+  @include hidetext;
+}
+
+.icon-gift {
+  background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
+  @include hidetext;
+}
+
+//分享按鈕
+
+.topnav-item{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+//youtube icon
 .icon-youtube{
-	background: url("../images/icon/YouTube/Normal.svg") no-repeat center/cover;
-	@include hidetext;
+	transition: 0.1s;
+
+	&:hover {
+		background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
+	}
+}
+//share icon
+.share {
+	position: relative;
+	z-index: 10;
+
+  &:hover {
+
+    .icon-share {
+      background: url("../images/icon/Share/Hover.svg") no-repeat center/cover;
+
+			&:before {
+				content: '';
+				width: 56px;
+				height: 40px;
+				display: block;
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				right: -10px;
+				border-radius: 0 20px 20px 0;
+				background-color: $color-white;
+			}
+    }
+
+		.icon-gift{
+
+		}
+
+		.share-list{
+			>li{
+				&:nth-child(1) {
+
+					&:before {
+						content: '';
+						width: 56px;
+						height: 40px;
+						display: block;
+						position: absolute;
+						z-index: -1;
+						top: 0;
+						left: -10px;
+						border-radius: 20px 0 0 20px;
+						background-color: $color-white;
+					}
+				}
+			}
+		}
+  }
+}
+.share-list {
+  display: flex;
+  position: relative;
+
+  &.is-openlist {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.is-closelist {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  > li {
+    position: absolute;
+    top: -40px;
+
+    &:nth-child(1) {
+      left: -80px;
+    }
+    &:nth-child(2) {
+      left: -40px;
+			background-color: $color-white;
+    }
+  }
 }
 
-.icon-share{
-	background: url("../images/icon/Share/Default.svg") no-repeat center/cover;
-	@include hidetext;
-}
-
+//gift icon
 .icon-gift{
-	background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
-	@include hidetext;
+	transition: 0.1s;
+
+	&:hover {
+		background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
+	}
 }

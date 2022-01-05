@@ -58,6 +58,11 @@
     overflow: hidden;
 }
 
+@mixin hidetext1 {
+	font-size: 0rem;
+	text-indent: -9999px;
+}
+
 // * No Script 的樣式
 @mixin no-js {
     @at-root .no-js & {

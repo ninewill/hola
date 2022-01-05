@@ -166,9 +166,11 @@ $(function () {
   function ctrlShareList() {
     let $shareList = $share.find(".share-list");
     if ($shareBtn.hasClass("is-open") === true) {
-      $shareList.stop(true, true).fadeIn();
+      $shareList.addClass("is-openlist");
+			$shareList.removeClass("is-closelist");
     } else {
-      $shareList.stop(true, true).fadeOut();
+      $shareList.addClass("is-closelist");
+			$shareList.removeClass("is-openlist");
     }
   }
 
