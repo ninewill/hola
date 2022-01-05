@@ -5,7 +5,7 @@
 // * BUTTON 區塊
 // * ==========================================================================
 
-.soshow-media-btn {
+.social-media-btn {
   width: 40px;
   height: 40px;
   display: block;
@@ -25,16 +25,19 @@
 .icon-facebook {
 	position: relative;
   background: url("../images/icon/Facebook/Normal.svg") no-repeat center/cover;
+	transition: 0.1s;
   @include hidetext;
 }
 
 .icon-line {
   background: url("../images/icon/Line/Normal.svg") no-repeat center/cover;
+	transition: 0.1s;
   @include hidetext;
 }
 
 .icon-gift {
   background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
+	transition: 0.1s;
   @include hidetext;
 }
 
@@ -77,10 +80,6 @@
 				background-color: $color-white;
 			}
     }
-
-		.icon-gift{
-
-		}
 
 		.share-list{
 			>li{
@@ -126,18 +125,28 @@
 
     &:nth-child(1) {
       left: -80px;
+
+			&:hover {
+				>a{
+					background: url("../images/icon/Facebook/Hover.svg") no-repeat center/cover;
+				}
+			}
     }
     &:nth-child(2) {
       left: -40px;
 			background-color: $color-white;
+
+			&:hover {
+				>a{
+					background: url("../images/icon/Line/Hover.svg") no-repeat center/cover;
+				}
+			}
     }
   }
 }
 
 //gift icon
 .icon-gift{
-	transition: 0.1s;
-
 	&:hover {
 		background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
 	}
