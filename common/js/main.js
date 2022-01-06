@@ -585,6 +585,7 @@ $(function () {
 
   var slideIn = 0;
 	var slideIn1 = 0;
+	var slideIn2 = 0;
 
   function title1() {
     var slide = document.querySelectorAll(".slide"),
@@ -608,12 +609,24 @@ $(function () {
     }
   }
 
+	function master() {
+    var slide2 = document.querySelectorAll(".slide2"),
+      nextSlide2 = typeof slide2[slideIn2 + 1] !== "undefined" ? slideIn2 + 1 : 0;
+
+    if (slide2[nextSlide2] && slide2[slideIn2]) {
+      slide2[slideIn2].className = "slide2 out";
+      slide2[nextSlide2].className = "slide2 in";
+      slideIn2 = nextSlide2;
+    }
+  }
+
   var playInterval,
     PlayTimer = 5000; //  second
 
   function play() {
     title1();
 		title2();
+		master();
     playInterval = setTimeout(play, PlayTimer);
   }
 

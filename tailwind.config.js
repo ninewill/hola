@@ -3,8 +3,8 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   purge: {
     //啟用編譯
-    enabled: true,
-    content: ["./**/*.html"],
+    //enabled: true,
+    //content: ["./**/*.html"],
   },
   presets: [],
   darkMode: "class", // or 'media' or 'class'

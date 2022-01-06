@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+// * ==========================================================================
+// * Card 區塊
+// * ==========================================================================
+
+.master-card-wrap {
+  display: flex;
+}
+
+.master-card {
+  display: flex;
+  margin-right: 56px;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+
+  .master-card-content {
+    margin-top: auto;
+    margin-bottom: 0;
+
+    > figure {
+      width: 270px;
+      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
+    }
+
+    > span {
+      display: block;
+    }
+  }
+}
+
+.master-card-tag {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  @include roboto-txt;
+}
+.master-card-info {
+  color: $color-primary-3;
+  font-weight: 400;
+  font-size: 14px;
+  @include roboto-txt;
+}
+.master-card-title {
+  margin-top: 8px;
+  display: flex;
+  color: $color-primary-1;
+  font-weight: 700;
+  font-size: 22px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 30px;
+    margin-right: 0.5rem;
+    background-color: $color-primary-1;
+  }
+}
+
+
+.fixed-text{
+	position: absolute;
+	right: 0;
+	font-weight: 400;
+	font-size: 12px;
+	writing-mode: vertical-rl;
+	writing-mode: sideways-lr;
+	@include roboto-txt;
+
+	>span{
+		color: $color-primary-1;
+	}
+}
