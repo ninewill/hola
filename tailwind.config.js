@@ -3,8 +3,8 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   purge: {
     //啟用編譯
-    //enabled: true,
-    //content: ["./**/*.html"],
+    enabled: true,
+    content: ["./**/*.html"],
   },
   presets: [],
   darkMode: "class", // or 'media' or 'class'
@@ -22,6 +22,7 @@ module.exports = {
 			
 			//主要顏色
 			bg_gray1: "#F5F5F5",
+			orange1: "#ED6D34",
 
 			
       black: colors.black,
@@ -227,6 +228,8 @@ module.exports = {
       "7xl": ["4.5rem", { lineHeight: "1" }],
       "8xl": ["6rem", { lineHeight: "1" }],
       "9xl": ["8rem", { lineHeight: "1" }],
+
+			"85": '85px',
     },
     fontWeight: {
       thin: "100",

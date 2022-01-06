@@ -17,8 +17,16 @@
   > .h2 {
     width: 144px;
     height: 54px;
+		display: block;
     background: url("../images/icon/Logo/Normal.svg") no-repeat center/cover;
+		transition: 0.1s;
     @include hidetext;
+
+		@include min-width(1025px) {
+			&:hover{
+				background: url("../images/icon/Logo/Hover.svg") no-repeat center/cover;
+			}
+		}
   }
 
   .label {
@@ -110,4 +118,47 @@
   100% {
     opacity: 1;
   }
+}
+
+
+//內容
+.main-content{
+	width: 100%;
+}
+
+.main-content-left{
+	width: 330px;
+}
+
+.main-content-left-border{
+	border-right: 1px solid $color-gray;
+}
+
+.main-content-left-text {
+	color: $color-gray-2;
+	font-weight: 400;
+	font-size: 15px;
+}
+
+.text-date-title{
+	@include roboto-txt;
+}
+
+.text-date-subtitle{
+	font-weight: 400;
+	font-size: 32px;
+
+	>span{
+		@include roboto-txt;
+
+		&:last-child{
+			font-weight: 200;
+			font-size: 21px;
+		}
+	}
+}
+
+.text-video-title{
+	font-weight: 400;
+	font-size: 14px;
 }

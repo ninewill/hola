@@ -25,9 +25,10 @@
 
   .wrap {
     width: calc(100% - 40px);
-		height: calc(100% - 137px);
     max-width: 1440px;
     margin: auto;
+		padding-top: 80px;
+		padding-bottom: 80px;
   }
 
   // * ==========================================================================

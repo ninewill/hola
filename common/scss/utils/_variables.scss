@@ -7,16 +7,20 @@
 // 預設的文字顏色
 $color-default: #313131;
 
-$color-white: #ffffff;
-$color-black: #000000;
-$color-orange: #f87147;
+
 
 // 主要配色
 $color-primary-1: #ED6D34;
 $color-primary-2: #00A496;
 $color-primary-3: #9E9E9E;
 
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-orange: #f87147;
+$color-orange-1: #FF9262;
 $color-gray: #BDBDBD;
+$color-gray-2: #424242;
 
 // FOCUS 時的外框
 $focus-border: 0 0 0 0.2rem rgba($color-orange, 0.5);
