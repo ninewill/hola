@@ -76,3 +76,109 @@
     color: $color-primary-1;
   }
 }
+
+
+
+// * ==========================================================================
+// *  accordion手風琴 區塊
+// * ==========================================================================
+
+.accordion-page{
+	width: 100%;
+	margin-top: 18px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	position: relative;
+	min-height: 68vh;
+	border: 1px solid $color-black;
+	transition: all 200ms ease-in-out 50ms;
+	opacity: 0;
+	
+	.page{
+		position: relative;
+		border-right: 1px solid $color-black;
+		background: $color-white;
+		color: $color-black;
+		transition: all 200ms ease-in-out 50ms;
+
+		&:last-child{
+			border: none;
+		}
+	}
+
+	.page-title{
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		margin-top: -62px;
+		margin-left: 3px;
+		writing-mode: vertical-lr;
+		text-orientation: upright;
+		color: $color-primary-3;
+		font-size: 16px;
+		cursor: pointer;
+	}
+
+	.page-tab{
+		width: 28px;
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		color: $color-primary-1;
+		text-align: center;
+		font-weight: 500;
+		font-size: 16px;
+		@include roboto-txt;
+
+		&::after{
+			content: "";
+			display: block;
+			width: 40px;
+			height: 5px;
+			background-color: $color-primary-1;
+		}
+	}
+
+	.default{
+		width: 40px;
+		height: 68vh;
+		color: rgba(255,255,255,0);
+		overflow: hidden;
+
+		>h1{
+			color: rgba(255,255,255,0);
+		}
+
+		>.page-title{
+			display: inline-block;
+		}
+		>.page-tab{
+			display: inline-block;
+		}
+		
+	}
+	
+	.expand{
+		height: 68vh;
+		width: 100vw;
+		background: $color-gray-3;
+		color: rgba(255,255,255,1);
+		padding: 20px;
+
+		>h1{
+			color: rgba(255,255,255,1);
+		}
+
+		>.page-title{
+			display: none;
+		}
+		>.page-tab{
+			display: none;
+		}
+	}
+	
+}
+

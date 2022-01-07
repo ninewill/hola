@@ -632,6 +632,29 @@ $(function () {
 
   play();
 
+
+
+	/*
+   * ==========================================================================
+   * 垂直收合手風琴頁面
+   * ==========================================================================
+   */
+
+	window.setTimeout(function() {
+		$('.accordion-page').css('opacity', '1');
+	}, 0);
+
+	$('.page').addClass('default');
+	
+		$('.page').on('click', function() {
+	
+	  	var e = $('.accordion-page .page');
+			if(e.hasClass('expand')){
+				 e.removeClass('expand');
+			 	$(this).addClass('expand');
+			} else { $(this).addClass('expand'); }
+		})
+
   /*
    * ==========================================================================
    * 無障礙跳過此子選單列按鈕
