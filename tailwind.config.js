@@ -23,6 +23,8 @@ module.exports = {
 			//主要顏色
 			bg_gray1: "#F5F5F5",
 			orange1: "#ED6D34",
+			gray1: "#9E9E9E",
+			gray2: "#616161",
 
 			
       black: colors.black,

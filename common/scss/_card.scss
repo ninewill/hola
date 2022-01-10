@@ -35,7 +35,7 @@
 .master-card-tag {
   margin-top: 8px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   @include roboto-txt;
 }
 .master-card-info {
@@ -66,7 +66,7 @@
   right: 30px;
   bottom: 95px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   writing-mode: vertical-rl;
   text-orientation: sideways;
   transform: rotate(-180deg);
@@ -94,6 +94,7 @@
   border: 1px solid $color-black;
   transition: all 200ms ease-in-out 50ms;
   opacity: 0;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
   &:after {
     content: "";
@@ -156,11 +157,12 @@
     position: absolute;
     top: 50%;
     margin-top: -62px;
-    margin-left: 3px;
+    margin-left: 0px;
     writing-mode: vertical-lr;
     text-orientation: upright;
     color: $color-primary-3;
-    font-size: 16px;
+    font-size: 18px;
+		letter-spacing: 3px;
     cursor: pointer;
   }
 
@@ -172,7 +174,7 @@
     color: $color-primary-1;
     text-align: center;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     @include roboto-txt;
 
     &::after {
@@ -186,7 +188,7 @@
 
   .page-content {
     height: 100%;
-    display: block;
+    display: flex;
   }
 
   .default {
@@ -224,7 +226,7 @@
       display: none;
     }
     > .page-content {
-      display: block;
+      display: flex;
     }
   }
 }
@@ -232,6 +234,7 @@
 //內容
 
 .page-content-left {
+	width: 52%;
   display: flex;
   height: 100%;
 }
@@ -248,7 +251,7 @@
 .page-content-info-top-title {
   display: flex;
   justify-content: center;
-  margin-top: 131px;
+  margin-top: 95px;
   position: relative;
   font-weight: 400;
   font-size: 32px;
@@ -260,7 +263,7 @@
     display: block;
     position: absolute;
     top: -24px;
-    left: 90px;
+    left: 60px;
     background: url("../images/icon/Pattern/Message.svg") no-repeat center/cover;
   }
 }
@@ -278,6 +281,8 @@
   height: 100%;
 
   > figure {
+		border-right: 1px solid $color-black;
+		border-left: 1px solid $color-black;
     height: 100%;
 
     > img {
@@ -291,6 +296,10 @@
   display: flex;
   justify-content: space-between;
   padding: 45px;
+}
+
+.page-collect-img{
+	filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.25));
 }
 
 .page-content-info-bottom-info {
@@ -314,4 +323,112 @@
       background: url("../images/icon/Pattern/Star.svg") no-repeat center/cover;
     }
   }
+}
+
+.page-content-right{
+	width: 48%;
+	padding: 0 45px;
+}
+
+.page-teacher-info{
+	height: 450px;
+	margin-top: 88px;
+	position: relative;
+
+	&::after{
+		content:"";
+		position: absolute;
+		top: 0;
+		right: -40px;
+		width: 24px;
+		height: 24px;
+		display: block;
+		background: url("../images/icon/Button/Arrow/Arrow-1.svg") no-repeat center/cover;
+
+		@include min-width(1025px) {
+			animation: nextpage 1.3s cubic-bezier(0.86, 0.04, 1, 1)
+				infinite reverse;
+
+			@keyframes nextpage {
+				0% {
+					transform: translateX(-10px);
+				}
+				50% {
+					transform: translateX(0px);
+				}
+				100% {
+					transform: translateX(-10px);
+				}
+			}
+		}
+	}
+}
+
+.page-teacher-info-title{
+	display: flex;
+
+	>span{
+		margin-top: 10px;
+		margin-right: 16px;
+		display: block;
+		font-weight: 900;
+		font-size: 20px;
+		color: $color-primary-1;
+		@include roboto-txt;
+
+		&:after { 
+			content: "";
+			display: block;
+			width: 100%;
+			height: 3px;
+			background-color: $color-primary-1;
+		}
+	}
+
+	>.h2{
+		font-weight: 900;
+		font-size: 40px;
+		color: $color-primary-1;
+		@include NotoSansTC-txt;
+	}
+}
+
+.page-teacher-label{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 32px;
+}
+
+.page-teacher-label-left{
+	margin-right: 40px;
+}
+
+.label-text{
+	font-size: 14px;
+}
+
+.page-teacher-label-title{
+	color: $color-primary-3;
+}
+
+.page-teacher-label-left-name{
+		font-weight: 500;
+	color: $color-primary-1;
+}
+
+.page-teacher-label-right-name{
+		font-weight: 500;
+	color: $color-primary-1;
+}
+
+
+.page-teacher-experience{
+	margin-top: 26px;
+
+	>p{
+		margin-top: 4px;
+		text-align: justify;
+		font-size: 16px;
+		color: $color-gray-6;
+	}
 }
