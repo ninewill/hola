@@ -244,13 +244,13 @@
 }
 
 .page-content-info-top {
-  padding: 20px;
+  padding: 20px 56px;
+
   border-bottom: 1px solid $color-black;
 }
 
 .page-content-info-top-title {
   display: flex;
-  justify-content: center;
   margin-top: 95px;
   position: relative;
   font-weight: 400;
@@ -263,7 +263,7 @@
     display: block;
     position: absolute;
     top: -24px;
-    left: 60px;
+    left: 0px;
     background: url("../images/icon/Pattern/Message.svg") no-repeat center/cover;
   }
 }
@@ -274,6 +274,10 @@
   text-align: right;
   font-weight: 700;
   font-size: 63px;
+
+	&.no-mtop{
+		margin-top: 0;
+	}
 }
 
 .page-content-photo {
@@ -360,6 +364,12 @@
 					transform: translateX(-10px);
 				}
 			}
+		}
+	}
+
+	&.hidden-arrow{
+		&::after{
+			display: none;
 		}
 	}
 }

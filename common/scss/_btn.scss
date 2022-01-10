@@ -13,6 +13,7 @@
 
 .icon-youtube {
   background: url("../images/icon/YouTube/Normal.svg") no-repeat center/cover;
+	transition: 0.1s;
   @include hidetext;
 }
 
@@ -48,14 +49,54 @@
   flex-direction: column;
 }
 
-//youtube icon
-.icon-youtube {
+.hover-text{
+	width: 66px;
+	height: 24px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 10px;
+	z-index: 1;
+	opacity: 0;
+	font-weight: 700;
+	font-size: 14px;
+	color: $color-white;
+	background-color: $color-primary-2;
+	transform: translateX(-35px);
+	transition: 0.2s;
+}
+
+.youtube{
+	position: relative;
+	z-index: 5;
   transition: 0.1s;
 
-  &:hover {
-    background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
-  }
+	&:hover {
+		.icon-youtube {
+			background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
+		}
+
+		.hover-text{
+			opacity: 1;
+			transform: translateX(-70px)
+		}
+	}
 }
+//youtube icon
+//.icon-youtube {
+//	position: relative;
+//  transition: 0.1s;
+
+//  &:hover {
+//    background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
+
+//		.hover-text{
+//			opacity: 1;
+//		}
+//  }
+//}
 //share icon
 .share {
   position: relative;
@@ -189,7 +230,7 @@
   margin-top: 34px;
   font-weight: 700;
   font-size: 18px;
-  color: $color-gray-5;
+  color: $color-primary-3;
   transition: 0.1s;
 
   &:after {
