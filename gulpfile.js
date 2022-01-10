@@ -93,6 +93,7 @@ const JS_PLUGINS = [
     './common/js/plugins/lightgallery-all.min.js',
     './common/js/plugins/footable.js',
     './common/js/plugins/swiper.min.js',
+		'./common/js/plugins/glightbox.js',
     './common/js/*.js'
 ];
 
