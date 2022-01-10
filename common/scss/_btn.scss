@@ -17,89 +17,86 @@
 }
 
 .icon-share {
-	position: relative;
+  position: relative;
   background: url("../images/icon/Share/Default.svg") no-repeat center/cover;
   @include hidetext1;
 }
 
 .icon-facebook {
-	position: relative;
+  position: relative;
   background: url("../images/icon/Facebook/Normal.svg") no-repeat center/cover;
-	transition: 0.1s;
+  transition: 0.1s;
   @include hidetext;
 }
 
 .icon-line {
   background: url("../images/icon/Line/Normal.svg") no-repeat center/cover;
-	transition: 0.1s;
+  transition: 0.1s;
   @include hidetext;
 }
 
-.icon-gift {
-  background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
-	transition: 0.1s;
-  @include hidetext;
-}
+//.icon-gift {
+//  background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
+//  transition: 0.1s;
+//  @include hidetext;
+//}
 
 //分享按鈕
 
-.topnav-item{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.topnav-item {
+  display: flex;
+  flex-direction: column;
 }
 
 //youtube icon
-.icon-youtube{
-	transition: 0.1s;
+.icon-youtube {
+  transition: 0.1s;
 
-	&:hover {
-		background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
-	}
+  &:hover {
+    background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
+  }
 }
 //share icon
 .share {
-	position: relative;
-	z-index: 10;
+  position: relative;
+  z-index: 10;
 
   &:hover {
-
     .icon-share {
       background: url("../images/icon/Share/Hover.svg") no-repeat center/cover;
 
-			&:before {
-				content: '';
-				width: 56px;
-				height: 40px;
-				display: block;
-				position: absolute;
-				z-index: -1;
-				top: 0;
-				right: -10px;
-				border-radius: 0 20px 20px 0;
-				background-color: $color-white;
-			}
+      &:before {
+        content: "";
+        width: 56px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -10px;
+        border-radius: 0 20px 20px 0;
+        background-color: $color-white;
+      }
     }
 
-		.share-list{
-			>li{
-				&:nth-child(1) {
-
-					&:before {
-						content: '';
-						width: 56px;
-						height: 40px;
-						display: block;
-						position: absolute;
-						z-index: -1;
-						top: 0;
-						left: -10px;
-						border-radius: 20px 0 0 20px;
-						background-color: $color-white;
-					}
-				}
-			}
-		}
+    .share-list {
+      > li {
+        &:nth-child(1) {
+          &:before {
+            content: "";
+            width: 56px;
+            height: 40px;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: -10px;
+            border-radius: 20px 0 0 20px;
+            background-color: $color-white;
+          }
+        }
+      }
+    }
   }
 }
 .share-list {
@@ -126,62 +123,93 @@
     &:nth-child(1) {
       left: -80px;
 
-			&:hover {
-				>a{
-					background: url("../images/icon/Facebook/Hover.svg") no-repeat center/cover;
-				}
-			}
+      &:hover {
+        > a {
+          background: url("../images/icon/Facebook/Hover.svg") no-repeat
+            center/cover;
+        }
+      }
     }
     &:nth-child(2) {
       left: -40px;
-			background-color: $color-white;
+      background-color: $color-white;
 
-			&:hover {
-				>a{
-					background: url("../images/icon/Line/Hover.svg") no-repeat center/cover;
-				}
-			}
+      &:hover {
+        > a {
+          background: url("../images/icon/Line/Hover.svg") no-repeat
+            center/cover;
+        }
+      }
     }
   }
 }
 
 //gift icon
-.icon-gift{
-	&:hover {
-		background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
-	}
+.icon-gift {
+  &:hover {
+    background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
+  }
 }
 
-.video-btn{
-	padding: 14px;
-	display: inline-block;
-	background-color:$color-primary-1;
-	border-radius: 5px;
-	font-weight: 700;
-	font-size: 22px;
+.video-btn {
+  padding: 14px;
+  display: inline-block;
+  background-color: $color-primary-1;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 22px;
+  transition: 0.1s;
+
+  @include min-width(1025px) {
+    &:hover {
+      background-color: $color-orange-1;
+    }
+  }
+
+  > span {
+    display: flex;
+    align-items: center;
+    color: $color-white;
+
+    &:after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-left: 0.5rem;
+      display: block;
+      background: url("../images/icon/Button/Play/Normal.svg") no-repeat
+        center/cover;
+    }
+  }
+}
+
+.favorited-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 34px;
+  font-weight: 700;
+  font-size: 18px;
+  color: $color-gray-5;
 	transition: 0.1s;
 
+
+  &:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    margin-left: 0.25rem;
+    display: block;
+    background: url("../images/icon/Button/Arrow/Arrow-3.svg") no-repeat center/cover;
+		transition: 0.1s;
+  }
+
 	@include min-width(1025px) {
-		&:hover {
-			background-color: 	$color-orange-1;
-		}
-	}
+    &:hover {
+			color: $color-orange-1;
 
-
-
-	>span{
-		display: flex;
-		align-items: center;
-		color: $color-white;
-
-		&:after {
-			content: "";
-			width: 24px;
-			height: 24px;
-			margin-left: 0.5rem;
-			display: block;
-			background: url("../images/icon/Button/Play/Normal.svg") no-repeat center/cover;
-		}
-	}
-
+			&:after {
+				background: url("../images/icon/Button/Arrow/Arrow-1.svg") no-repeat center/cover;
+			}
+    }
+  }
 }
