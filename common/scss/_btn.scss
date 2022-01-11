@@ -36,11 +36,11 @@
   @include hidetext;
 }
 
-//.icon-gift {
-//  background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
-//  transition: 0.1s;
-//  @include hidetext;
-//}
+.icon-gift {
+  background: url("../images/icon/Gift/Normal.svg") no-repeat center/cover;
+  transition: 0.1s;
+  @include hidetext;
+}
 
 //分享按鈕
 
@@ -50,8 +50,6 @@
 }
 
 .hover-text{
-	width: 66px;
-	height: 24px;
 	border-radius: 5px;
 	display: flex;
 	justify-content: center;
@@ -60,14 +58,26 @@
 	top: 10px;
 	z-index: 1;
 	opacity: 0;
+	line-height: 24px;
 	font-weight: 700;
 	font-size: 14px;
 	color: $color-white;
 	background-color: $color-primary-2;
 	transform: translateX(-35px);
 	transition: 0.2s;
+
+	&.hover-text-yt{
+		width: 66px;
+		height: 24px;
+	}
+
+	&.hover-text-gift{
+		width: 40px;
+		height: 24px;
+	}
 }
 
+//youtube icon
 .youtube{
 	position: relative;
 	z-index: 5;
@@ -84,19 +94,7 @@
 		}
 	}
 }
-//youtube icon
-//.icon-youtube {
-//	position: relative;
-//  transition: 0.1s;
 
-//  &:hover {
-//    background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
-
-//		.hover-text{
-//			opacity: 1;
-//		}
-//  }
-//}
 //share icon
 .share {
   position: relative;
@@ -186,9 +184,20 @@
 }
 
 //gift icon
-.icon-gift {
+.gift {
+	position: relative;
+	z-index: 5;
+  transition: 0.1s;
+
   &:hover {
-    background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
+		.icon-gift {
+			background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
+		}
+
+		.hover-text{
+			opacity: 1;
+			transform: translateX(-44px)
+		}
   }
 }
 
@@ -291,6 +300,43 @@
         margin-left: 0.5rem;
         display: block;
         background: url("../images/icon/Button/Folder/Normal.svg") no-repeat
+          center/cover;
+      }
+    }
+  }
+}
+
+
+.back-btn{
+  margin-top: 12px;
+
+  > a {
+    padding: 11.5px 39px;
+    display: inline-block;
+    background-color: $color-primary-1;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.1s;
+
+    @include min-width(1025px) {
+      &:hover {
+        background-color: $color-orange-1;
+      }
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+
+      &:after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        margin-left: 0.5rem;
+        display: block;
+        background: url("../images/icon/Button/Arrow/Arrow-2.svg") no-repeat
           center/cover;
       }
     }
