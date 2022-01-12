@@ -577,6 +577,37 @@ $(function () {
   ctrlCarousel(screenWidth);
 
 
+
+
+	/*
+   * ==========================================================================
+   * 輪播翻牌
+   * ==========================================================================
+   */
+
+	var swiper = new Swiper(".student-page-wiper", {
+		direction: 'vertical',
+		effect: "flip",
+		grabCursor: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		loop: true,
+	});
+
+	var swiper2 = new Swiper(".student-page-wiper2", {
+		direction: 'vertical',
+		effect: "flip",
+		grabCursor: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		loop: true,
+	});
+
+
 	/*
    * ==========================================================================
    * 首頁圖文更換

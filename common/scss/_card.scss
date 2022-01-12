@@ -582,7 +582,7 @@
     display: block;
     position: absolute;
     top: -44px;
-    left: 250px;
+    left: 360px;
     background: url("../images/Svg/Student/Pattern_1.svg") no-repeat
       center/cover;
   }
@@ -609,7 +609,7 @@
     align-items: center;
     padding: 10px 32px 10px 14px;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 20px;
     color: $color-white;
     background-color: $color-orange-1;
 
@@ -626,7 +626,7 @@
   }
 
   .student-page-grid1-item {
-    height: calc(100% - 43.5px);
+    height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
 
@@ -636,11 +636,11 @@
       justify-content: space-between;
       flex: 1;
       background-color: $color-gray-3;
-			border-bottom: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
 
-			&:last-child{
-				border-bottom: none;
-			}
+      &:last-child {
+        border-bottom: none;
+      }
 
       > a {
         height: 100%;
@@ -654,24 +654,24 @@
             width: 56px;
             height: 56px;
             margin-right: 10px;
-						transition: 0.1s;
+            transition: 0.1s;
 
             &.student-avatar1 {
               background: url("../images/Student/Tap/1/Normal.png") no-repeat
                 center/cover;
             }
-						&.student-avatar2 {
+            &.student-avatar2 {
               background: url("../images/Student/Tap/2/Normal.png") no-repeat
                 center/cover;
             }
-						&.student-avatar3 {
+            &.student-avatar3 {
               background: url("../images/Student/Tap/3/Normal.png") no-repeat
                 center/cover;
             }
           }
           > .student-page-grid1-tab-top-title {
-						opacity: 0.5;
-						transition: 0.1s;
+            opacity: 0.5;
+            transition: 0.1s;
 
             > .h3 {
               display: flex;
@@ -690,41 +690,40 @@
         > .student-page-grid1-tab-bottom {
           font-weight: 400;
           font-size: 18px;
-					opacity: 0.3;
-					transition: 0.1s;
+          opacity: 0.3;
+          transition: 0.1s;
         }
       }
 
-			@include min-width(1025px) {
-				&:hover {
-					> a {
-						> .student-page-grid1-tab-top {
-							> .student-avatar {
-	
-								&.student-avatar1 {
-									background: url("../images/Student/Tap/1/Hover.png") no-repeat
-										center/cover;
-								}
-								&.student-avatar2 {
-									background: url("../images/Student/Tap/2/Hover.png") no-repeat
-										center/cover;
-								}
-								&.student-avatar3 {
-									background: url("../images/Student/Tap/3/Hover.png") no-repeat
-										center/cover;
-								}
-							}
-							> .student-page-grid1-tab-top-title {
-								opacity: 1;
-							}
-						}
-		
-						> .student-page-grid1-tab-bottom {
-							opacity: 1;
-						}
-					}
-				}
-			}
+      @include min-width(1025px) {
+        &:hover {
+          > a {
+            > .student-page-grid1-tab-top {
+              > .student-avatar {
+                &.student-avatar1 {
+                  background: url("../images/Student/Tap/1/Hover.png") no-repeat
+                    center/cover;
+                }
+                &.student-avatar2 {
+                  background: url("../images/Student/Tap/2/Hover.png") no-repeat
+                    center/cover;
+                }
+                &.student-avatar3 {
+                  background: url("../images/Student/Tap/3/Hover.png") no-repeat
+                    center/cover;
+                }
+              }
+              > .student-page-grid1-tab-top-title {
+                opacity: 1;
+              }
+            }
+
+            > .student-page-grid1-tab-bottom {
+              opacity: 1;
+            }
+          }
+        }
+      }
 
       &.current {
         background-color: $color-orange-2;
@@ -746,9 +745,17 @@
                 background: url("../images/Student/Tap/1/Pessed.png") no-repeat
                   center/cover;
               }
+              &.student-avatar2 {
+                background: url("../images/Student/Tap/2/Pessed.png") no-repeat
+                  center/cover;
+              }
+              &.student-avatar3 {
+                background: url("../images/Student/Tap/3/Pessed.png") no-repeat
+                  center/cover;
+              }
             }
             > .student-page-grid1-tab-top-title {
-							opacity: 1;
+              opacity: 1;
 
               > .h3 {
                 display: flex;
@@ -777,7 +784,7 @@
           > .student-page-grid1-tab-bottom {
             font-weight: 400;
             font-size: 18px;
-						opacity: 1;
+            opacity: 1;
           }
         }
       }
@@ -785,10 +792,91 @@
   }
 }
 
-
 .student-page-grid2 {
   width: 40%;
-  height: 100%;
+  border-right: 1px solid $color-black;
+}
+
+.student-page-grid2-top {
+	height: 247.66px;
+  display: flex;
+  border-bottom: 1px solid $color-black;
+
+  > figure {
+    width: 183px;
+
+		>img{
+			height: 100%;
+		}
+  }
+
+  > .student-page-grid2-top-title {
+    width: calc(100% - 183px);
+    position: relative;
+		margin-top: 87px;
+		padding: 0 45px;
+    font-weight: 400;
+    font-size: 28px;
+
+    &:after {
+      content: "";
+      width: 24px;
+      height: 24px;
+      display: block;
+      position: absolute;
+      top: -24px;
+      left: 45px;
+      background: url("../images/icon/Pattern/Message.svg") no-repeat
+        center/cover;
+    }
+  }
+}
+
+.student-page-grid2-bottom-subtitle{
+	display: flex;
+}
+
+.student-page-grid2-bottom{
+	height: calc(100% - 247.66px);
+	padding: 58px 36px;
+}
+
+.student-page-grid2-bottom-subtitle-left{
+	margin-right: 108px;
+}
+.student-title{
+	font-weight: 500;
+	font-size: 16px;
+	color: $color-primary-3;
+	@include roboto-txt;
+}
+
+.student-name{
+	font-weight: 700;
+	font-size: 16px;
+	color: $color-primary-1;
+}
+
+.student-page-grid2-bottom-info{
+	margin-top: 35px;
+
+	.student-info-title{
+		font-weight: 500;
+		font-size: 16px;
+		color: $color-primary-3;
+		@include roboto-txt;
+	}
+
+	>p{
+		margin-bottom: 2rem;
+		font-weight: 400;
+		font-size: 16px;
+		color: $color-gray-6;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 }
 
 .student-page-grid3 {
