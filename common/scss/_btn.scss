@@ -342,3 +342,40 @@
     }
   }
 }
+
+.immediately-btn {
+	display: flex;
+  margin-top: 100px;
+
+  > a {
+    padding: 11.5px 39px;
+    display: inline-block;
+    background-color: $color-primary-1;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.1s;
+
+    @include min-width(1025px) {
+      &:hover {
+        background-color: $color-orange-1;
+      }
+    }
+
+    > span {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+
+      &:after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        margin-left: 0.5rem;
+        display: block;
+        background: url("../images/icon/Button/Folder/Normal.svg") no-repeat
+          center/cover;
+      }
+    }
+  }
+}
