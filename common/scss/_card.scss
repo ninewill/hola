@@ -994,7 +994,7 @@
           > a {
             > .lecture-page-grid1-tab-top {
               transform: translateY(70px);
-							opacity: 1;
+              opacity: 1;
             }
 
             > .lecture-page-grid1-tab-bottom {
@@ -1132,80 +1132,214 @@
   > .lecture-page-grid2-bottom-title {
     display: flex;
 
-		>.lecture-page-grid2-bottom-title-left{
-			margin-right: 54px;
-		}
+    > .lecture-page-grid2-bottom-title-left {
+      margin-right: 54px;
+    }
 
-		.lecture-page-grid2-bottom-title-left-title{
-			font-weight: 500;
-			font-size: 16px;
-			color: $color-primary-3;
-			@include roboto-txt;
-		}
+    .lecture-page-grid2-bottom-title-left-title {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-primary-3;
+      @include roboto-txt;
+    }
 
-		.lecture-page-grid2-bottom-title-left-name{
-			font-weight: 700;
-			font-size: 16px;
-			color: $color-primary-1;
-			@include roboto-txt;
-		}
+    .lecture-page-grid2-bottom-title-left-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-primary-1;
+      @include roboto-txt;
+    }
   }
 
-	>.lecture-page-grid2-bottom-subtitle{
-		margin-top: 24px;
+  > .lecture-page-grid2-bottom-subtitle {
+    margin-top: 24px;
 
-		.lecture-page-grid2-bottom-subtitle-title{
-			font-weight: 500;
-			font-size: 16px;
-			color: $color-primary-3;
-			@include roboto-txt;
-		}
+    .lecture-page-grid2-bottom-subtitle-title {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-primary-3;
+      @include roboto-txt;
+    }
 
-		.lecture-page-grid2-bottom-subtitle-name{
-			font-weight: 700;
-			font-size: 16px;
-			color: $color-primary-1;
-			@include roboto-txt;
-		}
-	}
+    .lecture-page-grid2-bottom-subtitle-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-primary-1;
+      @include roboto-txt;
+    }
+  }
 
-	>.lecture-page-grid2-bottom-content{
-		margin-top: 24px;
+  > .lecture-page-grid2-bottom-content {
+    margin-top: 24px;
 
-		.lecture-page-grid2-bottom-content-title{
-			font-weight: 500;
-			font-size: 16px;
-			color: $color-primary-3;
-			@include roboto-txt;
-		}
+    .lecture-page-grid2-bottom-content-title {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-primary-3;
+      @include roboto-txt;
+    }
 
-		.lecture-page-grid2-bottom-content-name{
-			font-weight: 700;
-			font-size: 16px;
-			color: $color-primary-1;
-			@include roboto-txt;
-		}
-	}
+    .lecture-page-grid2-bottom-content-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-primary-1;
+      @include roboto-txt;
+    }
+  }
 }
 
+.lecture-page-grid3 {
+  width: 40%;
 
-.lecture-page-grid3{
-	width: 40%;
+  > figure {
+    &.lecture-page-grid3-1 {
+      height: 346px;
+    }
+
+    &.lecture-page-grid3-2 {
+      height: 280.78px;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// * ==========================================================================
+// *  講師講座介紹 區塊
+// * ==========================================================================
+
+.lottery-page {
+  margin-top: 54px;
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+}
+
+.lottery-page-left {
+  width: 50%;
+}
+
+.lottery-page-left-top {
+  > .h2 {
+    display: inline-block;
+    position: relative;
+    font-weight: 900;
+    font-size: 28px;
+    color: $color-primary-1;
+    @include NotoSansTC-txt;
+
+    &:after {
+      content: "";
+      width: 66px;
+      height: 32px;
+      position: absolute;
+      top: -30px;
+      right: -55px;
+      display: block;
+      background: url("../images/Lottery/Pop_01.svg") no-repeat center/cover;
+    }
+  }
+  > span {
+    margin-top: 5px;
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    color: $color-primary-3;
+  }
+}
+
+.lottery-page-left-bottom {
+  > ul {
+    margin-top: 55px;
+    display: flex;
+
+    > li {
+      width: 33.33%;
+      margin-right: 70px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > figure {
+      }
+
+      > figcaption {
+        margin-top: 20px;
+
+        .figcaption-title {
+          font-weight: 400;
+          font-size: 16px;
+          color: $color-primary-1;
+        }
+
+        .figcaption-subtitle {
+          font-weight: 400;
+          font-size: 18px;
+          color: $color-gray-6;
+        }
+      }
+    }
+  }
+}
+
+.lottery-page-right {
+  width: 50%;
+	margin-left: 82px;
+}
+
+.lottery-page-right-top {
+  > .h2 {
+    display: inline-block;
+    position: relative;
+    font-weight: 900;
+    font-size: 28px;
+    color: $color-primary-1;
+    @include NotoSansTC-txt;
+
+    &:after {
+      content: "";
+      width: 49px;
+      height: 32px;
+      position: absolute;
+      top: -30px;
+      right: -35px;
+      display: block;
+      background: url("../images/Lottery/Pop_02.svg") no-repeat center/cover;
+    }
+  }
+  > span {
+    margin-top: 5px;
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    color: $color-primary-3;
+  }
+}
+
+.lottery-page-right-bottom{
+	margin-top: 33px;
 
 	>figure{
 
-		&.lecture-page-grid3-1{
-			height: 346px;
+	}
+
+	>figcaption{
+		margin-top: 32px;
+
+		.figcaption-title{
+			font-weight: 400;
+			font-size: 20px;
+			color: $color-primary-1;
 		}
 
-		&.lecture-page-grid3-2{
-			height: 280.78px;
-		}
-		
-
-		>img{
-			width: 100%;
-			height: 100%;
+		.figcaption-subtitle{
+			font-weight: 400;
+			font-size: 16px;
+			color: $color-gray-6;
 		}
 	}
 }
