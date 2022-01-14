@@ -52,3 +52,16 @@ $fontsize: (
     base: 1rem,
     small-base: 0.9rem,
 );
+
+// * ==========================================================================
+// * 預設樣式設定
+// * ==========================================================================
+
+// * Focus時的外框樣式
+@function focusBorder($inside:false, $opacity:0.6) {
+	@if $inside == true {
+			@return inset 0 0 0 0.1rem rgba(#00A496, $opacity);
+	} @else {
+			@return 0 0 0 0.1rem rgba(#00A496, $opacity);
+	}
+}

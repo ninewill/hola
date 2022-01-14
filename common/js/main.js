@@ -616,10 +616,10 @@ $(function () {
 
 
 	var swiper3 = new Swiper(".popup-swiper-form", {
-		//autoplay: {
-		//	delay: 5000,
-		//	disableOnInteraction: false,
-		//},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,

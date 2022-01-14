@@ -79,7 +79,31 @@
     }
 
     // * ==========================================================================
-    // * Heading 類型標籤設定
+    // * 按鈕類型標籤設定
     // * ==========================================================================
 
 
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"],
+		textarea,
+		select,
+		button {
+			border: none;
+	
+			&:focus,
+			&:focus-visible,
+			&:active{
+				outline: none;
+				box-shadow: focusBorder(false, 0.6);
+				transition: box-shadow 0.15s ease-in-out;
+				position: relative;
+			}
+	
+			@include max-width(1024px) {
+				appearance: none;
+			}
+		}
