@@ -1,44 +1,19 @@
-/* -------------------------------- 
 
-Modules - reusable parts of our design
+// * ==========================================================================
+// * popup  表單彈窗
+// * ==========================================================================
 
--------------------------------- */
-.img-replace {
-  /* replace text with an image */
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  color: transparent;
-  white-space: nowrap;
-}
-
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-
-.cd-popup-trigger {
-
-}
-
-
-/* -------------------------------- 
-
-xpopup 
-
--------------------------------- */
 .cd-popup {
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(94, 110, 141, 0.9);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
+	z-index: 10;
 }
 .cd-popup.is-visible {
   opacity: 1;
@@ -49,15 +24,103 @@ xpopup
 .cd-popup-container {
   position: relative;
   width: 90%;
-  max-width: 400px;
+  max-width: 1053px;
+	height: 673px;
   margin: 4em auto;
-  background: #FFF;
-  border-radius: .25em .25em .4em .4em;
+	border: 1px solid $color-black;
+  background: $color-white;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-40px);
-  /* Force Hardware Acceleration in WebKit */
+  transform: translateY(100%);
   -webkit-backface-visibility: hidden;
   transition-property: transform;
   transition-duration: 0.3s;
+
+	//LEFT
+	.cd-popup-container-left{
+		width: 50%;
+		height: 100%;
+		border-right: 1px solid $color-black;
+	}
+
+	//LEFT TOP
+	.cd-popup-container-left-top{
+		padding: 37px;
+		background-color: $color-orange-1;
+	}
+
+	.form-tag{
+		padding: 3px 5px;
+		display: inline-block;
+		background-color: $color-white;
+		border-radius: 5px;
+		font-weight: 400;
+		font-size: 14px;
+		color: $color-orange-1;
+	}
+
+	.form-title{
+		font-weight: 900;
+		font-size: 30px;
+		color: $color-white;
+		@include NotoSansTC-txt;
+	}
+
+	.form-subtitle{
+		font-weight: 400;
+		font-size: 20px;
+		color: $color-white;
+	}
+
+	//LEFT BOTTOM
+	.cd-popup-container-left-bottom{
+		position: relative;
+		margin-top: 2rem;
+	}
+
+
+
+	//RIGHT
+	.cd-popup-container-right{
+		width: 50%;
+	}
+}
+
+
+//關閉X按鈕
+.cd-popup-close {
+  position: absolute;
+  top: 31px;
+  right: 28px;
+  width: 30px;
+  height: 30px;
+	display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+}
+.cd-popup-container .cd-popup-close::before,
+.cd-popup-container .cd-popup-close::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 29px;
+  height: 2px;
+  background-color: $color-primary-1;
+}
+.cd-popup-close{
+	&::before{
+		transform: rotate(45deg);
+		left: 1px;
+	}
+}
+.cd-popup-close {
+	&::after{
+		transform: rotate(-45deg);
+		right: 1px;
+	}
+}
+
+.is-visible .cd-popup-container {
+  transform: translateY(10%);
 }

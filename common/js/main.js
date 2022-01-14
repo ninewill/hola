@@ -608,6 +608,30 @@ $(function () {
 	});
 
 
+		/*
+   * ==========================================================================
+   * 輪播表單
+   * ==========================================================================
+   */
+
+
+	var swiper3 = new Swiper(".popup-swiper-form", {
+		//autoplay: {
+		//	delay: 5000,
+		//	disableOnInteraction: false,
+		//},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		loop: true,
+	});
+
+
 	/*
    * ==========================================================================
    * 首頁圖文更換
