@@ -747,6 +747,17 @@ $(function () {
 			} else { $(this).addClass('expand'); }
 		})
 
+
+		$(".back-btn-page1").click(()=>{
+			$('#page1').addClass("expand");
+		})
+		$(".back-btn-page2").click(()=>{
+			$('#page2').addClass("expand");
+		})
+		$(".back-btn-page3").click(()=>{
+			$('#page3').addClass("expand");
+		})
+
   /*
    * ==========================================================================
    * 無障礙跳過此子選單列按鈕
