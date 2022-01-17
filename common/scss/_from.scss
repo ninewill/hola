@@ -181,6 +181,14 @@
         background: url("../images/icon/Button/Arrow/Arrow-2.svg") no-repeat
           center/cover;
 			}
+
+			@include min-width(1025px) {
+				&:hover{
+					.btn-submit{
+						background-color: $color-orange-1;
+					}
+				}
+			}
 		}
 
 		.btn-submit{

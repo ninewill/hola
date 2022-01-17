@@ -63,7 +63,7 @@
 
 .fixed-text {
   position: absolute;
-  right: 30px;
+  right: 0px;
   bottom: 95px;
   font-weight: 400;
   font-size: 14px;
@@ -256,6 +256,7 @@
 }
 
 .page-content-info-top-title {
+	height: 192px;
   display: flex;
   margin-top: 95px;
   position: relative;
@@ -275,7 +276,6 @@
 }
 
 .page-content-info-top-subtitle {
-  margin-top: 64px;
   color: $color-gray-4;
   text-align: right;
   font-weight: 700;
@@ -1081,7 +1081,7 @@
   border-right: 1px solid $color-black;
 }
 .lecture-page-grid2-top {
-  padding: 37px;
+  padding: 54px;
   border-bottom: 1px solid $color-black;
 
   > .lecture-page-grid2-top-tag {
@@ -1324,7 +1324,11 @@
 	margin-top: 33px;
 
 	>figure{
-
+		border-radius: 10px;
+		
+		>img{
+			border-radius: 10px;
+		}
 	}
 
 	>figcaption{
