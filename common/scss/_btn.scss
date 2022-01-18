@@ -45,8 +45,18 @@
 //分享按鈕
 
 .topnav-item {
+	position: absolute;
+	top: 0;
+	right: 0;
+	order: 1;
   display: flex;
-  flex-direction: column;
+	justify-content: flex-end;
+
+	@include min-width(1025px) {
+		position: static;
+		order: 2;
+		flex-direction: column;
+	}
 }
 
 .hover-text{
@@ -83,14 +93,16 @@
 	z-index: 5;
   transition: 0.1s;
 
-	&:hover {
-		.icon-youtube {
-			background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
-		}
-
-		.hover-text{
-			opacity: 1;
-			transform: translateX(-70px)
+	@include min-width(1025px) {
+		&:hover {
+			.icon-youtube {
+				background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
+			}
+	
+			.hover-text{
+				opacity: 1;
+				transform: translateX(-70px)
+			}
 		}
 	}
 }
@@ -99,6 +111,8 @@
 .share {
   position: relative;
   z-index: 10;
+
+	@include min-width(1025px) {
 
   &:hover {
     .icon-share {
@@ -137,6 +151,7 @@
       }
     }
   }
+	}
 }
 .share-list {
   display: flex;
@@ -384,6 +399,7 @@
 	display: flex;
 	justify-content: center;
   margin-top: 10px;
+	margin-bottom: 47px;
 
   > a {
     padding: 11.5px 65px;

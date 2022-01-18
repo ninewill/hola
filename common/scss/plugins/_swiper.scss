@@ -719,27 +719,3 @@ button.swiper-pagination-bullet {
     /* Windows 8 IE 10 fix */
     -ms-perspective: 1200px;
 }
-
-
-//翻牌效果
-.student-page-wiper{
-	height: 346px;
-}
-
-.student-page-wiper2{
-	height: 280.78px;
-	border-top: 1px solid $color-black;
-
-	.swiper-wrapper{
-		height: 100%;
-
-		img{
-			height: 100%;
-		}
-	}
-}
-
-//popup 輪播
-.popup-swiper-form{
-	overflow: hidden;
-}

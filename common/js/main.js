@@ -579,6 +579,7 @@ $(function () {
 
 
 
+
 	/*
    * ==========================================================================
    * 輪播翻牌
@@ -630,6 +631,24 @@ $(function () {
 		},
 		loop: true,
 	});
+
+
+		/*
+   * ==========================================================================
+   * 首頁手機版輪播
+   * ==========================================================================
+   */
+
+		if ($window.width() <= 768) {
+			var swiper4 = new Swiper(".index-swiper", {
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				spaceBetween: 50,
+				loop: true,
+			});
+		}
 
 
 	/*
@@ -685,7 +704,9 @@ $(function () {
     playInterval = setTimeout(play, PlayTimer);
   }
 
-  play();
+	if ($window.width() >= 768) {
+		play();
+	}
 
 
 	  /*

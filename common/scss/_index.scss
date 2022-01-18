@@ -7,56 +7,101 @@
 
 .main-top-bar {
   width: 100%;
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 
-	&.main-top-bar-border-b{
-		border-bottom: 1px solid $color-gray;
-		padding-bottom: 40px;
-	}
+  @include min-width(1025px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &.main-top-bar-border-b {
+    border-bottom: 1px solid $color-gray;
+    padding-bottom: 20px;
+
+    @include min-width(1025px) {
+      padding-bottom: 40px;
+    }
+  }
 }
 
 .main-top-bar-title {
   > .h2 {
     width: 144px;
     height: 54px;
-		display: block;
+    display: block;
     background: url("../images/icon/Logo/Normal.svg") no-repeat center/cover;
-		transition: 0.1s;
+    transition: 0.1s;
     @include hidetext;
 
-		@include min-width(1025px) {
-			&:hover{
-				background: url("../images/icon/Logo/Hover.svg") no-repeat center/cover;
-			}
-		}
+    @include min-width(1025px) {
+      &:hover {
+        background: url("../images/icon/Logo/Hover.svg") no-repeat center/cover;
+      }
+    }
   }
 
   .label {
-    margin-top: 35px;
-    padding: 0.2rem;
-    border: 2px solid $color-primary-1;
-    border-radius: 5px;
-    color: $color-primary-1;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
+    display: none;
+
+    @include min-width(1025px) {
+      display: block;
+      margin-top: 35px;
+      padding: 0.2rem;
+      border: 2px solid $color-primary-1;
+      border-radius: 5px;
+      color: $color-primary-1;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
   }
 }
 
 .main-top-bar-title-center {
-	width: 900px;
+  order: 2;
+	margin-top: 26px;
+
+  @include min-width(1025px) {
+    order: 1;
+		margin-top: 0;
+  }
+
+  @include min-width(1480px) {
+    width: 830px;
+  }
+
+  @include min-width(1660px) {
+    width: 900px;
+  }
 }
 
 .index-title {
-  width: 750px;
-	height: 100px;
+  width: 100%;
+  height: 50px;
   position: relative;
   overflow: hidden;
 
+  @include min-width(1025px) {
+    width: 750px;
+		height: 100px;
+  }
+
+  @include min-width(1280px) {
+  }
+
+  @include min-width(1480px) {
+    width: 700px;
+  }
+
+  @include min-width(1660px) {
+    width: 750px;
+  }
+
   > figure {
-		width: 100%;
-		height: 100%;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     position: absolute;
     top: 0;
@@ -64,80 +109,121 @@
     right: 0;
     left: 0;
 
-		>img{
-			width: 100%;
-			height: 100%;
-		}
+    > img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
-.index-subtitle{
-	width: 100%;
+.index-title-m{
+	width: 420px;
 	height: 50px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #fff;
+	background: url("../images/Svg/Title/1.svg") no-repeat center/cover;
+	font-size: 0rem;
+	text-indent: -9999px;
+	overflow: hidden;
+
+	@include min-width(1025px) {
+    display: none;
+  }
+}
+
+.index-title-hidden {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+  }
+}
+
+.index-subtitle {
+  width: 100%;
+  height: 50px;
+	margin-top: 10px;
   position: relative;
   overflow: hidden;
-	display: block;
-	font-weight: bold;
-	font-size: 32px;
+  display: block;
+  font-weight: bold;
+  font-size: 32px;
 
-	>.slide1{
-		width: 550px;
-		height: 100%;
-		padding-left: 1rem;
-		display: block;
+	@include min-width(1025px) {
+		margin-top: 0;
+	}
+
+  > .slide1 {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    display: block;
     opacity: 0;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 285px;
     left: 0;
-		margin: 0 auto;
-		color: $color-primary-3;
+    margin: 0 auto;
+    color: $color-primary-3;
+    font-size: 16px;
 
-		&:before{
-			content: "";
-			width: 24px;
-			height: 24px;
-			position: absolute;
-			left: -30px;
-			bottom: 14px;
-			display: block;
-			background: url("../images/icon/Pattern/Star.svg") no-repeat center/cover;
-		}
-	}
+    @include min-width(1025px) {
+      width: 550px;
+      padding-left: 1rem;
+      font-size: 32px;
+    }
+
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: 10px;
+      display: block;
+      background: url("../images/icon/Pattern/Star.svg") no-repeat center/cover;
+
+      @include min-width(1025px) {
+        left: -30px;
+        bottom: 14px;
+      }
+    }
+  }
 }
 
-.master-content{
-	width: 100%;
-	height: 563.5px;
-	display: flex;
-  position: relative;
-  overflow: hidden;
+.master-content {
+  display: none;
 
-	>.slide2{
-		width: 100%;
-		height: 100%;
-		padding-left: 2rem;
-		display: flex;
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-	}
+  @include min-width(1025px) {
+    width: 100%;
+    height: 595px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
 
+  > .slide2 {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
 }
-
-
-
-
 
 //動畫
 .in {
-	animation: comein 1s 1;
-	animation-fill-mode: both;
+  animation: comein 1s 1;
+  animation-fill-mode: both;
 }
 
 @keyframes comein {
@@ -152,51 +238,145 @@
 // * ==========================================================================
 // * Index 內容
 // * ==========================================================================
-.main-content{
-	width: 100%;
-	display: flex;
+.main-content {
+  width: 100%;
+  display: flex;
 }
 
 //左邊區塊
-.main-content-left{
-	width: 330px;
+.main-content-left {
+  width: 100%;
+
+  @include min-width(1025px) {
+		width: 330px;
+  }
+
+  @include min-width(1280px) {
+    width: 240px;
+  }
+
+  @include min-width(1480px) {
+    width: 280px;
+  }
+
+  @include min-width(1660px) {
+    width: 330px;
+  }
 }
 
-.main-content-left-border{
-	border-right: 1px solid $color-gray;
+.main-content-left-border {
+  @include min-width(1025px) {
+    border-right: 1px solid $color-gray;
+  }
 }
 
 .main-content-left-text {
-	color: $color-gray-2;
-	font-weight: 400;
-	font-size: 18px;
+  color: $color-gray-2;
+  font-weight: 400;
+  font-size: 15px;
+
+	@include min-width(1025px) {
+		font-size: 18px;
+	}
 }
 
-.text-date-title{
-	@include roboto-txt;
+.main-content-left-text2 {
+  display: flex;
+
+  @include min-width(1025px) {
+    display: block;
+    margin-top: 2.75rem;
+  }
 }
 
-.text-date-subtitle{
-	font-weight: 400;
-	font-size: 32px;
+.text-date-title {
+  @include roboto-txt;
+  font-size: 24px;
+
+  @include min-width(1025px) {
+    font-size: 85px;
+  }
 
 	>span{
-		@include roboto-txt;
+		display: inline-block;
+		color: $color-primary-1;
 
-		&:last-child{
-			font-weight: 200;
-			font-size: 21px;
+		@include min-width(1025px) {
+			display: none;
 		}
 	}
 }
 
-.text-video-title{
-	font-weight: 400;
-	font-size: 18px;
-	letter-spacing: 3px;
+.text-date-subtitle {
+  font-weight: 400;
+  font-size: 24px;
+
+  @include min-width(1025px) {
+    font-size: 32px;
+  }
+
+  > span {
+		font-weight: 700;
+		color: $color-primary-1;
+    @include roboto-txt;
+
+		@include min-width(1025px) {
+			font-weight: 400;
+			color: $color-black;
+		}
+
+    &:last-child {
+      display: none;
+
+      @include min-width(1025px) {
+        display: block;
+        font-weight: 200;
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.text-video-title {
+	text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 3px;
+	color: $color-gray-5;
+
+	@include min-width(1025px) {
+		text-align: left;
+		font-size: 18px;
+		color: $color-black;
+	}
+
+	>span{
+		display: inline-block;
+		color: $color-gray-5;
+
+		@include min-width(1025px) {
+			display: block;
+			color: $color-black;
+		}
+	}
 }
 
 //右邊區塊
-.main-content-right{
-	width: calc(100% - 330px);
+.main-content-right {
+  width: calc(100% - 330px);
+
+  @include min-width(960px) {
+  }
+
+  @include min-width(1280px) {
+    width: calc(100% - 240px);
+  }
+
+  @include min-width(1480px) {
+    width: calc(100% - 280px);
+  }
+
+  @include min-width(1660px) {
+    width: calc(100% - 330px);
+  }
 }

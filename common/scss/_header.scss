@@ -6,10 +6,15 @@
 // * ==========================================================================
 
 header {
-  position: fixed;
-  width: 60px;
+	width: 48px;
   height: 100%;
+  position: fixed;
+	z-index: 1000;
   box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.05);
+
+	@include min-width(1025px) {
+		width: 60px;
+	}
 }
 
 .mainheader {
