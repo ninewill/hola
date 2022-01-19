@@ -25,9 +25,9 @@
       width: 270px;
       filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
 
-			@include min-width(1480px) {
-				width: 270px;
-			}
+      @include min-width(1480px) {
+        width: 270px;
+      }
     }
 
     > span {
@@ -102,23 +102,23 @@
 }
 
 .accordion-page {
-	display: none;
+  display: none;
 
-	@include min-width(1025px) {
-		width: 100%;
-		margin-top: 18px;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-		position: relative;
-		min-height: 68vh;
-		border: 1px solid $color-black;
-		transition: all 200ms ease-in-out 50ms;
-		opacity: 0;
-		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-	}
+  @include min-width(1025px) {
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    min-height: 68vh;
+    border: 1px solid $color-black;
+    transition: all 200ms ease-in-out 50ms;
+    opacity: 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  }
 
   .page {
     position: relative;
@@ -243,74 +243,74 @@
   }
 }
 
-.accordion-page-m{
-	display: block;
-	margin-top: 39px;
-	
-	@include min-width(1025px) {
-		display: none;
-	}
+.accordion-page-m {
+  display: block;
+  margin-top: 39px;
+
+  @include min-width(1025px) {
+    display: none;
+  }
 }
 
-.accordion-page-m-item{
-	border: 1px solid $color-black;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+.accordion-page-m-item {
+  border: 1px solid $color-black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
-	>li{
-		border-bottom: 1px solid $color-black;
+  > li {
+    border-bottom: 1px solid $color-black;
 
-		&:last-child{
-			border-bottom:  none;
-		}
+    &:last-child {
+      border-bottom: none;
+    }
 
-		>a{
-			width: 100%;
-			height: 100%;
-			display: block;
+    > a {
+      width: 100%;
+      height: 100%;
+      display: block;
 
-			>figure{
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+      > figure {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-				>img{
-					margin: 0 auto;
-				}
-				>figcaption{
-					position: absolute;
-					top: 10%;
+        > img {
+          margin: 0 auto;
+        }
+        > figcaption {
+          position: absolute;
+          top: 10%;
 
-					>h3{
-						text-align: center;
-						font-weight: 900;
-						font-size: 20px;
-						color: $color-gray-2;
-						@include NotoSansTC-txt;
-					}
+          > h3 {
+            text-align: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: $color-gray-2;
+            @include NotoSansTC-txt;
+          }
 
-					>h4{
-						font-weight: 500;
-						font-size: 30px;
-						color: $color-white;
-						@include roboto-txt;
-					}
-				}
-			}
-		}
-	}
+          > h4 {
+            font-weight: 500;
+            font-size: 30px;
+            color: $color-white;
+            @include roboto-txt;
+          }
+        }
+      }
+    }
+  }
 }
 
-.accordion-page-m-text{
-	text-align: center;
-	font-weight: 300;
-	font-size: 16px;
+.accordion-page-m-text {
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
 }
 
-.accordion-page-m-info{
-	margin-top: 15px;
-	border: solid 1px $color-black;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+.accordion-page-m-info {
+  margin-top: 15px;
+  border: solid 1px $color-black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 // * ==========================================================================
@@ -326,18 +326,18 @@
 .page-content-info {
   width: 100%;
 
-	@include min-width(1025px) {
-		width: calc(100% - 248px);
-	}
+  @include min-width(1025px) {
+    width: calc(100% - 248px);
+  }
 }
 
 .page-content-info-top {
   padding: 32px;
-	padding-top: 56px;
+  padding-top: 56px;
 
-	@include min-width(1025px) {
-		padding: 20px 56px;
-	}
+  @include min-width(1025px) {
+    padding: 20px 56px;
+  }
 
   border-bottom: 1px solid $color-black;
 }
@@ -348,11 +348,11 @@
   font-weight: 400;
   font-size: 28px;
 
-	@include min-width(1025px) {
-		height: 192px;
-		margin-top: 95px;
-		font-size: 32px;
-	}
+  @include min-width(1025px) {
+    height: 192px;
+    margin-top: 95px;
+    font-size: 32px;
+  }
 
   &:after {
     content: "";
@@ -364,9 +364,9 @@
     left: 0px;
     background: url("../images/icon/Pattern/Message.svg") no-repeat center/cover;
 
-		@include min-width(1025px) {
-			top: -24px;
-		}
+    @include min-width(1025px) {
+      top: -24px;
+    }
   }
 }
 
@@ -374,11 +374,11 @@
   color: $color-gray-4;
   text-align: right;
   font-weight: 700;
-	font-size: 33px;
+  font-size: 33px;
 
-	@include min-width(1025px) {
-		font-size: 63px;
-	}
+  @include min-width(1025px) {
+    font-size: 63px;
+  }
 
   &.no-mtop {
     margin-top: 0;
@@ -386,20 +386,19 @@
 }
 
 .page-content-photo {
-  
   height: 100%;
 
-	@include min-width(1025px) {
-		width: 248px;
-	}
+  @include min-width(1025px) {
+    width: 248px;
+  }
 
   > figure {
     height: 100%;
 
-		@include min-width(1025px) {
-			border-right: 1px solid $color-black;
-			border-left: 1px solid $color-black;
-		}
+    @include min-width(1025px) {
+      border-right: 1px solid $color-black;
+      border-left: 1px solid $color-black;
+    }
 
     > img {
       height: 100%;
@@ -447,14 +446,14 @@
 }
 
 .page-teacher-info {
-	padding: 24px;
+  padding: 24px;
   position: relative;
 
-	@include min-width(1025px) {
-		padding: 0;
-		height: 450px;
-		margin-top: 88px;
-	}
+  @include min-width(1025px) {
+    padding: 0;
+    height: 450px;
+    margin-top: 88px;
+  }
 
   &::after {
     content: "";
@@ -495,7 +494,6 @@
   display: flex;
 
   > span {
-
     margin-right: 16px;
     display: block;
     font-weight: 900;
@@ -503,9 +501,9 @@
     color: $color-primary-1;
     @include roboto-txt;
 
-		@include min-width(1025px) {
-			margin-top: 10px;
-		}
+    @include min-width(1025px) {
+      margin-top: 10px;
+    }
 
     &:after {
       content: "";
@@ -518,41 +516,39 @@
 
   > .h2 {
     font-weight: 900;
-		font-size: 28px;
+    font-size: 28px;
     color: $color-primary-1;
     @include NotoSansTC-txt;
 
-		@include min-width(1025px) {
-			font-size: 40px;
-		}
+    @include min-width(1025px) {
+      font-size: 40px;
+    }
   }
 }
 
 .page-teacher-label {
-
-
-	@include min-width(1025px) {
-		display: flex;
-		justify-content: space-between;
-		margin-top: 32px;
-	}
+  @include min-width(1025px) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
 }
 
 .page-teacher-label-left {
   margin-top: 20px;
 
-	@include min-width(1025px) {
-		margin-top: 0;
-		margin-right: 40px;
-	}
+  @include min-width(1025px) {
+    margin-top: 0;
+    margin-right: 40px;
+  }
 }
 
-.page-teacher-label-right{
-	margin-top: 16px;
+.page-teacher-label-right {
+  margin-top: 16px;
 
-	@include min-width(1025px) {
-		margin-top: 0;
-	}
+  @include min-width(1025px) {
+    margin-top: 0;
+  }
 }
 
 .label-text {
@@ -589,25 +585,25 @@
 // * ==========================================================================
 
 .portfolio-page {
-	display: none;
+  display: none;
 
-	@include min-width(1025px) {
-		margin-top: 18px;
-		position: relative;
-		min-height: 68vh;
-		display: flex;
-		border: 1px solid $color-black;
-		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-	}
+  @include min-width(1025px) {
+    margin-top: 18px;
+    position: relative;
+    min-height: 68vh;
+    display: flex;
+    border: 1px solid $color-black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .portfolio-page-grid1 {
   width: 100%;
 
-	@include min-width(1025px) {
-		width: 246px;
-		border-right: 1px solid $color-black;
-	}
+  @include min-width(1025px) {
+    width: 246px;
+    border-right: 1px solid $color-black;
+  }
 
   > figure {
     position: relative;
@@ -632,13 +628,12 @@
 }
 
 .portfolio-page-grid2 {
-	width: 100%;
+  width: 100%;
 
-	@include min-width(1025px) {
-		width: 526px;
-		border-right: 1px solid $color-black;
-	}
-		
+  @include min-width(1025px) {
+    width: 526px;
+    border-right: 1px solid $color-black;
+  }
 
   .portfolio-page-grid2-top {
     display: flex;
@@ -667,13 +662,12 @@
 }
 
 .portfolio-page-grid3 {
-	width: 100%;
+  width: 100%;
   text-align: center;
 
-	@include min-width(1025px) {
-		width: calc(100% - 772px);
-	}
-		
+  @include min-width(1025px) {
+    width: calc(100% - 772px);
+  }
 
   .portfolio-page-grid3-top {
     border-bottom: 1px solid $color-black;
@@ -683,36 +677,34 @@
     padding: 45px;
     position: relative;
 
-		@include min-width(1025px) {
-			padding-top: 70px;
-			height: calc(100% - 420.44px);
+    @include min-width(1025px) {
+      padding-top: 70px;
+      height: calc(100% - 420.44px);
 
-			&:before {
-				content: "";
-				width: 84px;
-				height: 74px;
-				display: block;
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				background: url("../images/Svg/Teacher/Pattern_2.svg") no-repeat
-					center/cover;
-			}
-	
-			&:after {
-				content: "";
-				width: 63px;
-				height: 59px;
-				display: block;
-				position: absolute;
-				bottom: 0px;
-				right: 0px;
-				background: url("../images/Svg/Teacher/Pattern_3.svg") no-repeat
-					center/cover;
-			}
-		}
+      &:before {
+        content: "";
+        width: 84px;
+        height: 74px;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: url("../images/Svg/Teacher/Pattern_2.svg") no-repeat
+          center/cover;
+      }
 
-
+      &:after {
+        content: "";
+        width: 63px;
+        height: 59px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: url("../images/Svg/Teacher/Pattern_3.svg") no-repeat
+          center/cover;
+      }
+    }
   }
 
   .portfolio-page-grid3-description {
@@ -723,15 +715,14 @@
   }
 }
 
+.portfolio-page-m {
+  display: block;
+  border: 1px solid $color-black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
-.portfolio-page-m{
-	display: block;
-	border: 1px solid $color-black;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-
-	@include min-width(1025px) {
-		display: none;
-	}
+  @include min-width(1025px) {
+    display: none;
+  }
 }
 
 // * ==========================================================================
@@ -739,59 +730,58 @@
 // * ==========================================================================
 
 .student-page {
-	display: none;
+  display: none;
 
-	@include min-width(1025px) {
-		margin-top: 18px;
-		position: relative;
-		min-height: 68vh;
-		display: flex;
-		border: 1px solid $color-black;
-		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
-	
-		&::before {
-			content: "";
-			width: 159px;
-			height: 43px;
-			display: block;
-			position: absolute;
-			top: -44px;
-			left: 360px;
-			background: url("../images/Svg/Student/Pattern_1.svg") no-repeat
-				center/cover;
-		}
-	
-		&:after {
-			content: "";
-			width: 82px;
-			height: 292px;
-			display: block;
-			position: absolute;
-			bottom: 100px;
-			right: -83px;
-			background: url("../images/Svg/Student/Pattern_2.svg") no-repeat
-				center/cover;
-		}
-	}
+  @include min-width(1025px) {
+    margin-top: 18px;
+    position: relative;
+    min-height: 68vh;
+    display: flex;
+    border: 1px solid $color-black;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      content: "";
+      width: 159px;
+      height: 43px;
+      display: block;
+      position: absolute;
+      top: -44px;
+      left: 360px;
+      background: url("../images/Svg/Student/Pattern_1.svg") no-repeat
+        center/cover;
+    }
+
+    &:after {
+      content: "";
+      width: 82px;
+      height: 292px;
+      display: block;
+      position: absolute;
+      bottom: 100px;
+      right: -83px;
+      background: url("../images/Svg/Student/Pattern_2.svg") no-repeat
+        center/cover;
+    }
+  }
 }
 
-.student-page-pc{
-	display: none;
+.student-page-pc {
+  display: none;
 
-	@include min-width(1025px) {
-		display: flex;
-	}
-
+  @include min-width(1025px) {
+    display: flex;
+  }
 }
 
 .student-page-grid1 {
-	display: none;
+  display: none;
 
-	@include min-width(1025px) {
-		width: 20%;
-		display: block;
-		border-right: 1px solid $color-black;
-	}
+  @include min-width(1025px) {
+    width: 20%;
+    display: block;
+    border-right: 1px solid $color-black;
+  }
 
   > .h2 {
     display: flex;
@@ -982,68 +972,68 @@
 }
 
 .student-page-grid2 {
-	width: 100%;
+  width: 100%;
 
-	@include min-width(1025px) {
-		width: 40%;
-		border-right: 1px solid $color-black;
-	}
+  @include min-width(1025px) {
+    width: 40%;
+    border-right: 1px solid $color-black;
+  }
 }
 
 .student-page-grid2-top {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	@include min-width(1025px) {
-		flex-direction: row;
-		height: 247.66px;
-		border-bottom: 1px solid $color-black;
-	}
+  @include min-width(1025px) {
+    flex-direction: row;
+    height: 247.66px;
+    border-bottom: 1px solid $color-black;
+  }
 
   > figure {
-		order: 1;
+    order: 1;
 
-		@include min-width(1025px) {
-			width: 183px;
-			order: 0;
-		}
+    @include min-width(1025px) {
+      width: 183px;
+      order: 0;
+    }
 
     > img {
       height: 100%;
     }
   }
 
-	.student-page-grid2-top-pc{
-		display: none;
+  .student-page-grid2-top-pc {
+    display: none;
 
-		@include min-width(1025px) {
-			display: block;
-		}
-	}
+    @include min-width(1025px) {
+      display: block;
+    }
+  }
 
-	.student-page-grid2-top-m{
-		display: block;
-		
-		@include min-width(1025px) {
-			display: none;
-		}
-	}
+  .student-page-grid2-top-m {
+    display: block;
+
+    @include min-width(1025px) {
+      display: none;
+    }
+  }
 
   > .student-page-grid2-top-title {
-		position: relative;
-		padding: 56px 24px 40px 24px;
+    position: relative;
+    padding: 56px 24px 40px 24px;
 
-		@include min-width(1025px) {
-			width: calc(100% - 183px);
-			margin-top: 87px;
-			padding: 0 45px;
-			font-weight: 400;
-			font-size: 28px;
-		}
+    @include min-width(1025px) {
+      width: calc(100% - 183px);
+      margin-top: 87px;
+      padding: 0 45px;
+      font-weight: 400;
+      font-size: 28px;
+    }
 
     &:after {
       content: "";
-			width: 24px;
+      width: 24px;
       height: 24px;
       display: block;
       position: absolute;
@@ -1052,11 +1042,10 @@
       background: url("../images/icon/Pattern/Message.svg") no-repeat
         center/cover;
 
-			@include min-width(1025px) {
-				top: -24px;
-				left: 45px;
-			}
-
+      @include min-width(1025px) {
+        top: -24px;
+        left: 45px;
+      }
     }
   }
 }
@@ -1069,18 +1058,18 @@
   height: calc(100% - 247.66px);
   padding: 26px 21px;
 
-	@include min-width(1025px) {
-		padding: 58px 36px;
-	}
+  @include min-width(1025px) {
+    padding: 58px 36px;
+  }
 }
 
 .student-page-grid2-bottom-subtitle-left {
-	width: 40%;
+  width: 40%;
 
-	@include min-width(1025px) {
-		width: auto;
-		margin-right: 108px;
-	}
+  @include min-width(1025px) {
+    width: auto;
+    margin-right: 108px;
+  }
 }
 .student-title {
   font-weight: 500;
@@ -1094,9 +1083,9 @@
   font-size: 14px;
   color: $color-primary-1;
 
-	@include min-width(1025px) {
-		font-size: 16px;
-	}
+  @include min-width(1025px) {
+    font-size: 16px;
+  }
 }
 
 .student-page-grid2-bottom-info {
@@ -1122,130 +1111,123 @@
 }
 
 .student-page-grid3 {
-	width: 100%;
+  width: 100%;
   height: 100%;
 
-	@include min-width(1025px) {
-		width: 40%;
-	}
+  @include min-width(1025px) {
+    width: 40%;
+  }
 }
 
+.student-page-content-m {
+  margin-top: 24px;
+  display: block;
+  border: 1px solid $color-black;
 
-.student-page-content-m{
-	margin-top: 24px;
-	display: block;
-	border: 1px solid $color-black;
-
-	@include min-width(1025px) {
-		display: flex;
-	}
+  @include min-width(1025px) {
+    display: flex;
+  }
 }
 
-.student-page-m{
-	display: block;
-	margin-top: 39px;
-	border: 1px solid $color-black;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+.student-page-m {
+  display: block;
+  margin-top: 39px;
+  border: 1px solid $color-black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
-	>.h2{
-		padding: 12px;
-		text-align: center;
-		color: $color-white;
-		background-color: $color-orange-1;
-		font-weight: 700;
-	}
+  > .h2 {
+    padding: 12px;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-orange-1;
+    font-weight: 700;
+  }
 }
 
-.student-page-m-item{
+.student-page-m-item {
+  > li {
+    border-bottom: 1px solid $color-black;
 
-	>li{
-		border-bottom: 1px solid $color-black;
+    &:last-child {
+      border-bottom: none;
+    }
 
-		&:last-child{
-			border-bottom: none;
-		}
-
-		>a{
-			padding: 16px;
-			display: flex;
-			justify-content: space-between;
-		}
-	}
+    > a {
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
-.student-page-m-list-left{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.student-page-m-list-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-	>figure{
-		width: 56px;
-		height: 56px;
-	}
+  > figure {
+    width: 56px;
+    height: 56px;
+  }
 
-	.student-page-m-list-left-name{
-		margin-top: 20px;
+  .student-page-m-list-left-name {
+    margin-top: 20px;
 
-		@include min-width(1025px) {
-			margin-top: 0;
-		}
+    @include min-width(1025px) {
+      margin-top: 0;
+    }
 
-		>.h3{
-			margin-top: 0;
-			margin-bottom: 0;
-			color: $color-orange-1;
-			font-size: 18px;
-		}
-		>span{
-			display: block;
-			color: $color-primary-3;
-			font-size: 14px;
-		}
-	}
-
+    > .h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $color-orange-1;
+      font-size: 18px;
+    }
+    > span {
+      display: block;
+      color: $color-primary-3;
+      font-size: 14px;
+    }
+  }
 }
 
-.student-page-m-list-right{
-	>ul{
-		width: 145px;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
+.student-page-m-list-right {
+  > ul {
+    width: 145px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-		li{
-			display: flex;
-			align-items: center;
-			position: relative;
-			font-weight: 400;
-			font-size: 14px;
-			color: $color-gray-6;
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-weight: 400;
+      font-size: 14px;
+      color: $color-gray-6;
 
-			&:before{
-				content: "";
-				position: absolute;
-				left: -10px;
-				display: block;
-				width: 3px;
-				height: 3px;
-				border-radius: 50%;
-				background-color: $color-gray-6;
-			}
-		}
-	}
+      &:before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        display: block;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: $color-gray-6;
+      }
+    }
+  }
 }
 
+.student-page-hidden {
+  display: block;
 
-.student-page-hidden{
-	display: block;
-
-	@include min-width(1025px) {
-		display: none;
-	}
+  @include min-width(1025px) {
+    display: none;
+  }
 }
-
-
-
 
 // * ==========================================================================
 // *  講師講堂介紹 區塊
@@ -1576,13 +1558,21 @@
 
 .lottery-page {
   margin-top: 54px;
+  display: block;
   position: relative;
   min-height: 68vh;
-  display: flex;
+
+  @include min-width(1025px) {
+    display: flex;
+  }
 }
 
 .lottery-page-left {
-  width: 50%;
+  width: 100%;
+
+  @include min-width(1025px) {
+    width: 50%;
+  }
 }
 
 .lottery-page-left-top {
@@ -1590,9 +1580,13 @@
     display: inline-block;
     position: relative;
     font-weight: 900;
-    font-size: 28px;
+    font-size: 24px;
     color: $color-primary-1;
     @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			font-size: 28px;
+		}
 
     &:after {
       content: "";
@@ -1600,9 +1594,13 @@
       height: 32px;
       position: absolute;
       top: -30px;
-      right: -55px;
+      right: -30px;
       display: block;
       background: url("../images/Lottery/Pop_01.svg") no-repeat center/cover;
+
+			@include min-width(1025px) {
+				right: -55px;
+			}
     }
   }
   > span {
@@ -1617,17 +1615,38 @@
 .lottery-page-left-bottom {
   > ul {
     margin-top: 55px;
-    display: flex;
+		margin-left: 20px;
+
+    @include min-width(1025px) {
+			display: flex;
+			margin-left: 0;
+    }
 
     > li {
-      width: 33.33%;
-      margin-right: 70px;
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 32px;
+
+      @include min-width(1025px) {
+        width: 33.33%;
+        margin-right: 70px;
+				margin-bottom: 0;
+				display: block;
+      }
 
       &:last-child {
         margin-right: 0;
+				margin-bottom: 0;
       }
 
       > figure {
+				width: 30%;
+				margin-right: 40px;
+
+				@include min-width(1025px) {
+					width: auto;
+					margin-right: 0;
+				}
       }
 
       > figcaption {
@@ -1650,8 +1669,15 @@
 }
 
 .lottery-page-right {
-  width: 50%;
-	margin-left: 82px;
+	width: 100%;
+	margin-left: 0;
+	margin-top: 60px;
+
+	@include min-width(1025px) {
+		width: 50%;
+		margin-left: 82px;
+		margin-top: 0;
+	}
 }
 
 .lottery-page-right-top {
@@ -1659,9 +1685,13 @@
     display: inline-block;
     position: relative;
     font-weight: 900;
-    font-size: 28px;
+    font-size: 24px;
     color: $color-primary-1;
     @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			font-size: 28px;
+		}
 
     &:after {
       content: "";
@@ -1669,9 +1699,13 @@
       height: 32px;
       position: absolute;
       top: -30px;
-      right: -35px;
+      right: -20px;
       display: block;
       background: url("../images/Lottery/Pop_02.svg") no-repeat center/cover;
+
+			@include min-width(1025px) {
+				right: -35px;
+			}
     }
   }
   > span {
@@ -1683,46 +1717,43 @@
   }
 }
 
-.lottery-page-right-bottom{
-	margin-top: 33px;
+.lottery-page-right-bottom {
+  margin-top: 33px;
 
-	>figure{
-		border-radius: 10px;
-		
-		>img{
-			border-radius: 10px;
-		}
-	}
+  > figure {
+    border-radius: 10px;
 
-	>figcaption{
-		margin-top: 32px;
+    > img {
+      border-radius: 10px;
+    }
+  }
 
-		.figcaption-title{
-			font-weight: 400;
-			font-size: 20px;
-			color: $color-primary-1;
-		}
+  > figcaption {
+    margin-top: 32px;
 
-		.figcaption-subtitle{
-			font-weight: 400;
-			font-size: 16px;
-			color: $color-gray-6;
-		}
-	}
+    .figcaption-title {
+      font-weight: 400;
+      font-size: 20px;
+      color: $color-primary-1;
+    }
+
+    .figcaption-subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color-gray-6;
+    }
+  }
 }
-
-
 
 // * ==========================================================================
 // *  影片教學 區塊
 // * ==========================================================================
 
+.video-page {
+  display: flex;
+  flex-direction: column;
 
-.video-page{
-	display: flex;
-	flex-direction: column;
-	
-	@include min-width(1025px) {
-		flex-direction: row;
-	}
+  @include min-width(1025px) {
+    flex-direction: row;
+  }
 }

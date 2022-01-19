@@ -495,8 +495,12 @@
 
 .lottery-btn {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 70px;
+
+	@include min-width(1025px) {
+		justify-content: flex-end;
+	}
 
   > a {
     padding: 11.5px 65px;
