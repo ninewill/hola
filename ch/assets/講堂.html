@@ -32,15 +32,14 @@
       </header>
       <div id="main" class="wrap-content">
         <!-- @@include ../layout/_topbar.html -->
-				<div class="back-btn-m">
-					<a href="./講堂.html"><span>觀看其他講堂</span></a>
-				</div>
-        <section class="lecture-page">
+
+				<!--電腦版-->
+        <section class="lecture-page lecture-page-hidden">
           <div class="lecture-page-grid1">
             <h2 class="h2">超熱門精選講堂</h2>
             <ul class="lecture-page-grid1-item">
               <li class="current">
-                <a href="./講堂-mori.html">
+                <a href="./講堂.html">
                   <div class="lecture-page-grid1-tab-top">
                     <div class="lecture-page-grid1-tab-top-title">
                       <div class="lecture-page-grid1-tab-top-title-left">
@@ -117,7 +116,7 @@
             </ul>
           </div>
           <div class="lecture-page-grid-photo">
-            <figure class="album-image lecture-page-grid-photo-pc">
+            <figure class="album-image">
               <img
                 src="./../common/images/loader.gif"
                 data-src="./../common/images/Teacher/Mori Wang.jpg"
@@ -128,21 +127,6 @@
                 <img
                   alt="Title"
                   src="./../common/images/Teacher/Mori Wang.jpg"
-                />
-              </noscript>
-            </figure>
-
-						<figure class="album-image lecture-page-grid-photo-m">
-              <img
-                src="./../common/images/loader.gif"
-                data-src="./../common/images/Mobile/Lecture/01_Teacher.jpg"
-                class="lazyload"
-                alt="Title"
-              />
-              <noscript>
-                <img
-                  alt="Title"
-                  src="./../common/images/Mobile/Lecture/01_Teacher.jpg"
                 />
               </noscript>
             </figure>
@@ -225,39 +209,120 @@
                 />
               </noscript>
             </figure>
-
-						<!--手機版 圖片1-->
-						<figure class="album-image lecture-page-grid3-3">
-              <img
-                src="./../common/images/loader.gif"
-                data-src="./../common/images/Mobile/Lecture/01/Portfolio_01.jpg"
-                class="lazyload"
-                alt="Title"
-              />
-              <noscript>
-                <img
-                  alt="Title"
-                  src="./../common/images/Mobile/Lecture/01/Portfolio_01.jpg"
-                />
-              </noscript>
-            </figure>
-						<!--手機版 圖片2-->
-						<figure class="album-image lecture-page-grid3-4">
-              <img
-                src="./../common/images/loader.gif"
-                data-src="./../common/images/Mobile/Lecture/01/Portfolio_02.jpg"
-                class="lazyload"
-                alt="Title"
-              />
-              <noscript>
-                <img
-                  alt="Title"
-                  src="./../common/images/Mobile/Lecture/01/Portfolio_02.jpg"
-                />
-              </noscript>
-            </figure>
           </div>
         </section>
+
+				<!--手機版-->
+				<section class="lecture-page-m section-page-m lecture-page-hidden-m">
+					<h2 class="h2">任意點選下列超熱門精選講堂 ▼</h2>
+					<ul class="lecture-page-m-item">
+						<li>
+							<a href="./講堂-mori.html">
+								<figure class="album-image">
+									<img
+										src="./../common/images/loader.gif"
+										data-src="./../common/images/Mobile/Lecture/Overview 01.jpg"
+										class="lazyload"
+										alt="Title"
+									/>
+									<noscript>
+										<img
+											alt="Title"
+											src="./../common/images/Mobile/Lecture/Overview 01.jpg"
+										/>
+									</noscript>
+									<figcaption class="lecture-page-m-info">
+										<div class="lecture-page-m-info-left">
+											<div class="lecture-page-m-info-left-top">
+												<div class="lecture-page-m-info-left-top-left">
+													<div class="lecture-page-m-info-left-top-left-top">2022</div>
+													<div class="lecture-page-m-info-left-top-left-bottom">Feb.</div>
+												</div>
+												<div class="lecture-page-m-info-left-top-right">11</div>
+											</div>
+											<div class="lecture-page-m-info-left-tag"># 台中場</div>
+										</div>
+										<div class="lecture-page-m-info-right">
+											<div class="lecture-page-m-info-right-subtitle">
+												色彩設計至印刷<br>選材環環相扣
+											</div>
+										</div>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							<a href="./講堂-hammer.html">
+								<figure class="album-image">
+									<img
+										src="./../common/images/loader.gif"
+										data-src="./../common/images/Mobile/Lecture/Overview 02.jpg"
+										class="lazyload"
+										alt="Title"
+									/>
+									<noscript>
+										<img
+											alt="Title"
+											src="./../common/images/Mobile/Lecture/Overview 02.jpg"
+										/>
+									</noscript>
+									<figcaption class="lecture-page-m-info">
+										<div class="lecture-page-m-info-left">
+											<div class="lecture-page-m-info-left-top">
+												<div class="lecture-page-m-info-left-top-left">
+													<div class="lecture-page-m-info-left-top-left-top">2022</div>
+													<div class="lecture-page-m-info-left-top-left-bottom">Feb.</div>
+												</div>
+												<div class="lecture-page-m-info-left-top-right">18</div>
+											</div>
+											<div class="lecture-page-m-info-left-tag"># 台北場</div>
+										</div>
+										<div class="lecture-page-m-info-right">
+											<div class="lecture-page-m-info-right-subtitle">
+												PS瘋玩<br>創意海報合成設計
+											</div>
+										</div>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+						<li>
+							<a href="./講堂-ian.html">
+								<figure class="album-image">
+									<img
+										src="./../common/images/loader.gif"
+										data-src="./../common/images/Mobile/Lecture/Overview 03.jpg"
+										class="lazyload"
+										alt="Title"
+									/>
+									<noscript>
+										<img
+											alt="Title"
+											src="./../common/images/Mobile/Lecture/Overview 03.jpg"
+										/>
+									</noscript>
+									<figcaption class="lecture-page-m-info">
+										<div class="lecture-page-m-info-left">
+											<div class="lecture-page-m-info-left-top">
+												<div class="lecture-page-m-info-left-top-left">
+													<div class="lecture-page-m-info-left-top-left-top">2022</div>
+													<div class="lecture-page-m-info-left-top-left-bottom">Feb.</div>
+												</div>
+												<div class="lecture-page-m-info-left-top-right">25</div>
+											</div>
+											<div class="lecture-page-m-info-left-tag"># 高雄場</div>
+										</div>
+										<div class="lecture-page-m-info-right">
+											<div class="lecture-page-m-info-right-subtitle">
+												字型設計與排版<br>接案技巧不私藏
+											</div>
+										</div>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+					</ul>
+				</section>
 
 				<!--表單-->
 			<!-- @@include ../layout/_popup-form.html -->

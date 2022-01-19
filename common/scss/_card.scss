@@ -1238,13 +1238,23 @@
   position: relative;
   min-height: 68vh;
   display: flex;
+  flex-direction: column;
   border: 1px solid $color-black;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+  @include min-width(1025px) {
+    flex-direction: row;
+  }
 }
 
 .lecture-page-grid1 {
-  width: 15%;
-  border-right: 1px solid $color-black;
+  display: none;
+
+  @include min-width(1025px) {
+    width: 15%;
+    display: block;
+    border-right: 1px solid $color-black;
+  }
 
   > .h2 {
     display: flex;
@@ -1408,8 +1418,12 @@
 }
 
 .lecture-page-grid-photo {
-  width: 15%;
-  border-right: 1px solid $color-black;
+
+
+	@include min-width(1025px) {
+		width: 15%;
+		border-right: 1px solid $color-black;
+	}
 
   > figure {
     height: 100%;
@@ -1421,13 +1435,39 @@
   }
 }
 
+.lecture-page-grid-photo-pc {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+  }
+}
+
+.lecture-page-grid-photo-m {
+  display: block;
+
+  @include min-width(1025px) {
+    display: none;
+  }
+}
+
 .lecture-page-grid2 {
-  width: 30%;
-  border-right: 1px solid $color-black;
+ 
+
+	@include min-width(1025px) {
+		width: 30%;
+		border-right: 1px solid $color-black;
+  }
 }
 .lecture-page-grid2-top {
-  padding: 54px;
-  border-bottom: 1px solid $color-black;
+	padding: 21px;
+	border-top: 1px solid $color-black;
+	border-bottom: 1px solid $color-black;
+
+	@include min-width(1025px) {
+		padding: 54px;
+		border-top: none;
+	}
 
   > .lecture-page-grid2-top-tag {
     margin-left: 1.5rem;
@@ -1472,7 +1512,11 @@
 }
 
 .lecture-page-grid2-bottom {
-  padding: 54px;
+  padding: 21px;
+
+	@include min-width(1025px) {
+		padding: 54px;
+	}
 
   > .lecture-page-grid2-bottom-title {
     display: flex;
@@ -1534,21 +1578,169 @@
 }
 
 .lecture-page-grid3 {
-  width: 40%;
+	border-top: 1px solid $color-black;
+
+	@include min-width(1025px) {
+		width: 40%;
+		border-top: none;
+	}
 
   > figure {
     &.lecture-page-grid3-1 {
-      height: 346px;
+			display: none;
+
+
+			@include min-width(1025px) {
+				height: 346px;
+				border-bottom: 1px solid $color-black;
+				display: block;
+			}
     }
 
     &.lecture-page-grid3-2 {
-      height: 280.78px;
+      display: none;
+
+			@include min-width(1025px) {
+				height: 280.78px;
+				display: block;
+			}
+    }
+
+		&.lecture-page-grid3-3 {
+			height: 208px;
+      display: block;
+			border-bottom: 1px solid $color-black;
+
+			@include min-width(1025px) {
+				display: none;
+			}
+    }
+
+		&.lecture-page-grid3-4 {
+			height: 146px;
+      display: block;
+
+			@include min-width(1025px) {
+				display: none;
+			}
     }
 
     > img {
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+.lecture-page-m {
+  display: block;
+  margin-top: 39px;
+  border: 1px solid $color-black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+  > .h2 {
+    padding: 12px;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-orange-1;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.lecture-page-m-item {
+  > li {
+    border-bottom: 1px solid $color-black;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    > a {
+      display: flex;
+      justify-content: space-between;
+
+      > figure {
+        position: relative;
+
+        > figcaption {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 16px;
+        }
+      }
+    }
+  }
+}
+
+.lecture-page-m-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lecture-page-m-info-left {
+  width: 30%;
+}
+
+.lecture-page-m-info-left-top {
+  display: flex;
+  border-bottom: 1px solid $color-black;
+}
+
+.lecture-page-m-info-left-top-left {
+  margin-right: 12px;
+}
+
+.lecture-page-m-info-left-top-left-top {
+  font-size: 12px;
+}
+
+.lecture-page-m-info-left-top-left-bottom {
+  font-size: 14px;
+}
+
+.lecture-page-m-info-left-top-right {
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 37px;
+  @include roboto-txt;
+}
+
+.lecture-page-m-info-left-tag {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: $color-orange-1;
+}
+
+.lecture-page-m-info-right {
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  .lecture-page-m-info-right-subtitle {
+    text-align: right;
+    font-size: 16px;
+  }
+}
+
+.lecture-page-hidden {
+  display: none;
+
+  @include min-width(1025px) {
+    display: flex;
+  }
+}
+
+.lecture-page-hidden-m {
+  display: block;
+
+  @include min-width(1025px) {
+    display: none;
   }
 }
 
@@ -1584,9 +1776,9 @@
     color: $color-primary-1;
     @include NotoSansTC-txt;
 
-		@include min-width(1025px) {
-			font-size: 28px;
-		}
+    @include min-width(1025px) {
+      font-size: 28px;
+    }
 
     &:after {
       content: "";
@@ -1598,9 +1790,9 @@
       display: block;
       background: url("../images/Lottery/Pop_01.svg") no-repeat center/cover;
 
-			@include min-width(1025px) {
-				right: -55px;
-			}
+      @include min-width(1025px) {
+        right: -55px;
+      }
     }
   }
   > span {
@@ -1615,38 +1807,38 @@
 .lottery-page-left-bottom {
   > ul {
     margin-top: 55px;
-		margin-left: 20px;
+    margin-left: 20px;
 
     @include min-width(1025px) {
-			display: flex;
-			margin-left: 0;
+      display: flex;
+      margin-left: 0;
     }
 
     > li {
-			display: flex;
-			align-items: flex-end;
-			margin-bottom: 32px;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 32px;
 
       @include min-width(1025px) {
         width: 33.33%;
         margin-right: 70px;
-				margin-bottom: 0;
-				display: block;
+        margin-bottom: 0;
+        display: block;
       }
 
       &:last-child {
         margin-right: 0;
-				margin-bottom: 0;
+        margin-bottom: 0;
       }
 
       > figure {
-				width: 30%;
-				margin-right: 40px;
+        width: 30%;
+        margin-right: 40px;
 
-				@include min-width(1025px) {
-					width: auto;
-					margin-right: 0;
-				}
+        @include min-width(1025px) {
+          width: auto;
+          margin-right: 0;
+        }
       }
 
       > figcaption {
@@ -1669,15 +1861,15 @@
 }
 
 .lottery-page-right {
-	width: 100%;
-	margin-left: 0;
-	margin-top: 60px;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 60px;
 
-	@include min-width(1025px) {
-		width: 50%;
-		margin-left: 82px;
-		margin-top: 0;
-	}
+  @include min-width(1025px) {
+    width: 50%;
+    margin-left: 82px;
+    margin-top: 0;
+  }
 }
 
 .lottery-page-right-top {
@@ -1689,9 +1881,9 @@
     color: $color-primary-1;
     @include NotoSansTC-txt;
 
-		@include min-width(1025px) {
-			font-size: 28px;
-		}
+    @include min-width(1025px) {
+      font-size: 28px;
+    }
 
     &:after {
       content: "";
@@ -1703,9 +1895,9 @@
       display: block;
       background: url("../images/Lottery/Pop_02.svg") no-repeat center/cover;
 
-			@include min-width(1025px) {
-				right: -35px;
-			}
+      @include min-width(1025px) {
+        right: -35px;
+      }
     }
   }
   > span {

@@ -23,7 +23,7 @@
 					<li><a href="./講師.html">講師</a></li>
 					<li><a href="./學員-student.html">學員</a></li>
 					<li><a href="./懶人包.html">懶人包</a></li>
-					<li class="current"><a href="./講堂-mori.html">講堂</a></li>
+					<li class="current"><a href="./講堂.html">講堂</a></li>
 					<li><a href="./抽獎.html">抽獎</a></li>
 					<li><a href="./影片教學.html">影片教學</a></li>
 				</ul>
@@ -31,6 +31,9 @@
 		</header>
     <div id="main" class="wrap-content">
 			<!-- @@include ../layout/_topbar.html -->
+			<div class="back-btn-m">
+				<a href="./講堂.html"><span>觀看其他講堂</span></a>
+			</div>
 			<section class="lecture-page">
 				<div class="lecture-page-grid1">
 					<h2 class="h2">超熱門精選講堂</h2>
@@ -89,7 +92,7 @@
 					</ul>
 				</div>
 				<div class="lecture-page-grid-photo">
-					<figure class="album-image">
+					<figure class="album-image lecture-page-grid-photo-pc">
 						<img
 							src="./../common/images/loader.gif"
 							data-src="./../common/images/Teacher/Ian Su.jpg"
@@ -100,6 +103,21 @@
 							<img
 								alt="Title"
 								src="./../common/images/Teacher/Ian Su.jpg"
+							/>
+						</noscript>
+					</figure>
+
+					<figure class="album-image lecture-page-grid-photo-m">
+						<img
+							src="./../common/images/loader.gif"
+							data-src="./../common/images/Mobile/Lecture/03_Teacher.jpg"
+							class="lazyload"
+							alt="Title"
+						/>
+						<noscript>
+							<img
+								alt="Title"
+								src="./../common/images/Mobile/Lecture/03_Teacher.jpg"
 							/>
 						</noscript>
 					</figure>
@@ -170,13 +188,46 @@
 							/>
 						</noscript>
 					</figure>
+
+					<!--手機版 圖片1-->
+					<figure class="album-image lecture-page-grid3-3">
+						<img
+							src="./../common/images/loader.gif"
+							data-src="./../common/images/Mobile/Lecture/03/Portfolio_01.jpg"
+							class="lazyload"
+							alt="Title"
+						/>
+						<noscript>
+							<img
+								alt="Title"
+								src="./../common/images/Mobile/Lecture/03/Portfolio_01.jpg"
+							/>
+						</noscript>
+					</figure>
+					<!--手機版 圖片2-->
+					<figure class="album-image lecture-page-grid3-4">
+						<img
+							src="./../common/images/loader.gif"
+							data-src="./../common/images/Mobile/Lecture/03/Portfolio_02.jpg"
+							class="lazyload"
+							alt="Title"
+						/>
+						<noscript>
+							<img
+								alt="Title"
+								src="./../common/images/Mobile/Lecture/03/Portfolio_02.jpg"
+							/>
+						</noscript>
+					</figure>
 				</div>
 			</section>
 
 			<!--表單-->
 			<!-- @@include ../layout/_popup-form.html -->
     </div>
-
+		<footer class="footer">
+			<!-- @@include ../layout/_footer.html -->
+		</footer>
   </div>
   <!-- @@include ../layout/_install.html -->
   <!-- @@include ../layout/_ga.html -->
