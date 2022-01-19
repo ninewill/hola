@@ -102,19 +102,23 @@
 }
 
 .accordion-page {
-  width: 100%;
-  margin-top: 18px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  position: relative;
-  min-height: 68vh;
-  border: 1px solid $color-black;
-  transition: all 200ms ease-in-out 50ms;
-  opacity: 0;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+	display: none;
+
+	@include min-width(1025px) {
+		width: 100%;
+		margin-top: 18px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		position: relative;
+		min-height: 68vh;
+		border: 1px solid $color-black;
+		transition: all 200ms ease-in-out 50ms;
+		opacity: 0;
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+	}
 
   .page {
     position: relative;
@@ -239,6 +243,76 @@
   }
 }
 
+.accordion-page-m{
+	display: block;
+	margin-top: 39px;
+	
+	@include min-width(1025px) {
+		display: none;
+	}
+}
+
+.accordion-page-m-item{
+	border: 1px solid $color-black;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+	>li{
+		border-bottom: 1px solid $color-black;
+
+		&:last-child{
+			border-bottom:  none;
+		}
+
+		>a{
+			width: 100%;
+			height: 100%;
+			display: block;
+
+			>figure{
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				>img{
+					margin: 0 auto;
+				}
+				>figcaption{
+					position: absolute;
+					top: 10%;
+
+					>h3{
+						text-align: center;
+						font-weight: 900;
+						font-size: 20px;
+						color: $color-gray-2;
+						@include NotoSansTC-txt;
+					}
+
+					>h4{
+						font-weight: 500;
+						font-size: 30px;
+						color: $color-white;
+						@include roboto-txt;
+					}
+				}
+			}
+		}
+	}
+}
+
+.accordion-page-m-text{
+	text-align: center;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.accordion-page-m-info{
+	margin-top: 15px;
+	border: solid 1px $color-black;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
 // * ==========================================================================
 // *  accordion手風琴內容 區塊
 // * ==========================================================================
@@ -250,22 +324,35 @@
 }
 
 .page-content-info {
-  width: calc(100% - 248px);
+  width: 100%;
+
+	@include min-width(1025px) {
+		width: calc(100% - 248px);
+	}
 }
 
 .page-content-info-top {
-  padding: 20px 56px;
+  padding: 32px;
+	padding-top: 56px;
+
+	@include min-width(1025px) {
+		padding: 20px 56px;
+	}
 
   border-bottom: 1px solid $color-black;
 }
 
 .page-content-info-top-title {
-	height: 192px;
   display: flex;
-  margin-top: 95px;
   position: relative;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
+
+	@include min-width(1025px) {
+		height: 192px;
+		margin-top: 95px;
+		font-size: 32px;
+	}
 
   &:after {
     content: "";
@@ -273,9 +360,13 @@
     height: 24px;
     display: block;
     position: absolute;
-    top: -24px;
+    top: -30px;
     left: 0px;
     background: url("../images/icon/Pattern/Message.svg") no-repeat center/cover;
+
+		@include min-width(1025px) {
+			top: -24px;
+		}
   }
 }
 
@@ -283,7 +374,11 @@
   color: $color-gray-4;
   text-align: right;
   font-weight: 700;
-  font-size: 63px;
+	font-size: 33px;
+
+	@include min-width(1025px) {
+		font-size: 63px;
+	}
 
   &.no-mtop {
     margin-top: 0;
@@ -291,13 +386,20 @@
 }
 
 .page-content-photo {
-  width: 248px;
+  
   height: 100%;
 
+	@include min-width(1025px) {
+		width: 248px;
+	}
+
   > figure {
-    border-right: 1px solid $color-black;
-    border-left: 1px solid $color-black;
     height: 100%;
+
+		@include min-width(1025px) {
+			border-right: 1px solid $color-black;
+			border-left: 1px solid $color-black;
+		}
 
     > img {
       height: 100%;
@@ -345,9 +447,14 @@
 }
 
 .page-teacher-info {
-  height: 450px;
-  margin-top: 88px;
+	padding: 24px;
   position: relative;
+
+	@include min-width(1025px) {
+		padding: 0;
+		height: 450px;
+		margin-top: 88px;
+	}
 
   &::after {
     content: "";
@@ -388,13 +495,17 @@
   display: flex;
 
   > span {
-    margin-top: 10px;
+
     margin-right: 16px;
     display: block;
     font-weight: 900;
     font-size: 20px;
     color: $color-primary-1;
     @include roboto-txt;
+
+		@include min-width(1025px) {
+			margin-top: 10px;
+		}
 
     &:after {
       content: "";
@@ -407,20 +518,41 @@
 
   > .h2 {
     font-weight: 900;
-    font-size: 40px;
+		font-size: 28px;
     color: $color-primary-1;
     @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			font-size: 40px;
+		}
   }
 }
 
 .page-teacher-label {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 32px;
+
+
+	@include min-width(1025px) {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 32px;
+	}
 }
 
 .page-teacher-label-left {
-  margin-right: 40px;
+  margin-top: 20px;
+
+	@include min-width(1025px) {
+		margin-top: 0;
+		margin-right: 40px;
+	}
+}
+
+.page-teacher-label-right{
+	margin-top: 16px;
+
+	@include min-width(1025px) {
+		margin-top: 0;
+	}
 }
 
 .label-text {
@@ -457,17 +589,25 @@
 // * ==========================================================================
 
 .portfolio-page {
-  margin-top: 18px;
-  position: relative;
-  min-height: 68vh;
-  display: flex;
-  border: 1px solid $color-black;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+	display: none;
+
+	@include min-width(1025px) {
+		margin-top: 18px;
+		position: relative;
+		min-height: 68vh;
+		display: flex;
+		border: 1px solid $color-black;
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+	}
 }
 
 .portfolio-page-grid1 {
-  width: 246px;
-  border-right: 1px solid $color-black;
+  width: 100%;
+
+	@include min-width(1025px) {
+		width: 246px;
+		border-right: 1px solid $color-black;
+	}
 
   > figure {
     position: relative;
@@ -492,8 +632,13 @@
 }
 
 .portfolio-page-grid2 {
-  width: 526px;
-  border-right: 1px solid $color-black;
+	width: 100%;
+
+	@include min-width(1025px) {
+		width: 526px;
+		border-right: 1px solid $color-black;
+	}
+		
 
   .portfolio-page-grid2-top {
     display: flex;
@@ -522,41 +667,52 @@
 }
 
 .portfolio-page-grid3 {
-  width: calc(100% - 772px);
+	width: 100%;
   text-align: center;
+
+	@include min-width(1025px) {
+		width: calc(100% - 772px);
+	}
+		
 
   .portfolio-page-grid3-top {
     border-bottom: 1px solid $color-black;
   }
 
   .portfolio-page-grid3-bottom {
-    padding-top: 70px;
-    height: calc(100% - 420.44px);
+    padding: 45px;
     position: relative;
 
-    &:before {
-      content: "";
-      width: 84px;
-      height: 74px;
-      display: block;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background: url("../images/Svg/Teacher/Pattern_2.svg") no-repeat
-        center/cover;
-    }
+		@include min-width(1025px) {
+			padding-top: 70px;
+			height: calc(100% - 420.44px);
 
-    &:after {
-      content: "";
-      width: 63px;
-      height: 59px;
-      display: block;
-      position: absolute;
-      bottom: 0px;
-      right: 0px;
-      background: url("../images/Svg/Teacher/Pattern_3.svg") no-repeat
-        center/cover;
-    }
+			&:before {
+				content: "";
+				width: 84px;
+				height: 74px;
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: url("../images/Svg/Teacher/Pattern_2.svg") no-repeat
+					center/cover;
+			}
+	
+			&:after {
+				content: "";
+				width: 63px;
+				height: 59px;
+				display: block;
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				background: url("../images/Svg/Teacher/Pattern_3.svg") no-repeat
+					center/cover;
+			}
+		}
+
+
   }
 
   .portfolio-page-grid3-description {
@@ -565,6 +721,17 @@
     font-size: 13px;
     color: $color-primary-3;
   }
+}
+
+
+.portfolio-page-m{
+	display: block;
+	border: 1px solid $color-black;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+	@include min-width(1025px) {
+		display: none;
+	}
 }
 
 // * ==========================================================================
