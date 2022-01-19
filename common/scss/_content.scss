@@ -1,351 +1,401 @@
 @charset "UTF-8";
 @import "./utils/_utils.scss";
 
+// * ==========================================================================
+// * 主要內容區域（#main 裡面的基本樣式）
+// * ==========================================================================
 
-  // * ==========================================================================
-  // * 主要內容區域（#main 裡面的基本樣式）
-  // * ==========================================================================
+#main {
+  // padding-top: 100px;
+  // padding-bottom: 100px;
+  position: relative;
+  // height: 100%;
 
-  #main {
-    // padding-top: 100px;
-    // padding-bottom: 100px;
-    position: relative;
-    // height: 100%;
+  // 單頁式網站的主要內容區塊
+  &.anchor-main {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
 
-    // 單頁式網站的主要內容區塊
-    &.anchor-main {
-      padding-top: 0px;
-      padding-bottom: 0px;
+// * ==========================================================================
+// * 頁面外圍控制整體布局寬度
+// * ==========================================================================
+
+.wrap {
+  width: calc(100% - 40px);
+  max-width: 100%;
+  margin: auto;
+  padding-left: 50px;
+  padding-top: 33px;
+  padding-bottom: 33px;
+
+  @include min-width(1025px) {
+    padding-left: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include min-width(1480px) {
+    max-width: 1280px;
+  }
+
+  @include min-width(1660px) {
+    max-width: 1440px;
+  }
+}
+
+.full-wrap {
+  width: calc(100% - 80px);
+  margin-top: 38px;
+  margin-left: 65px;
+  margin-right: auto;
+  margin-bottom: 72px;
+
+  @include min-width(1025px) {
+    width: calc(100% - 60px);
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+    border: 1px solid $color-black;
+  }
+}
+
+.wrap-content {
+  width: calc(100% - 40px);
+  max-width: 1280px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+
+  @include min-width(1025px) {
+    padding-left: 0;
+  }
+}
+
+// * ==========================================================================
+// * 標題
+// * ==========================================================================
+
+// * ==========================================================================
+// * 功能按鈕區塊
+// * ==========================================================================
+
+// * ==========================================================================
+// * 內文區塊
+// * ==========================================================================
+
+.left-box {
+  width: 100%;
+
+  @include min-width(1025px) {
+    width: 50%;
+    border-right: 1px solid $color-black;
+  }
+
+  .left-box-top {
+    @include min-width(1025px) {
+      height: 50%;
+      position: relative;
+      border-bottom: 1px solid $color-black;
+
+      &::before {
+        content: "";
+        width: 139px;
+        height: 73px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: url("../images/Svg/Gift/Pattern_1.svg") no-repeat
+          center/cover;
+      }
+
+      &:after {
+        content: "";
+        width: 212px;
+        height: 186px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: url("../images/Svg/Gift/Pattern_2.svg") no-repeat
+          center/cover;
+      }
     }
   }
 
-  // * ==========================================================================
-  // * 頁面外圍控制整體布局寬度
-  // * ==========================================================================
+  .left-box-bottom {
+    height: 200px;
+    margin-top: 31.72px;
+    position: relative;
+    background-color: $color-white;
+    border: 1px solid $color-black;
 
-  .wrap {
-    width: calc(100% - 40px);
-    max-width: 100%;
-    margin: auto;
-		padding-left: 50px;
-		padding-top: 33px;
-		padding-bottom: 33px;
+    @include min-width(1025px) {
+      height: 50%;
+      margin-top: 0;
+      border: none;
+      background-color: transparent;
+    }
 
-		@include min-width(1025px) {
-			padding-left: 0;
-			padding-top: 40px;
-			padding-bottom: 40px;
-		}
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      right: 0px;
+      background: url("../images/Mobile/Gift/Image.jpg") no-repeat center/contain;
+			background-position: 100%;
 
-		@include min-width(1480px) {
-			max-width: 1280px;
-		}
-
-		@include min-width(1660px) {
-			max-width: 1440px;
-		}
+      @include min-width(1025px) {
+        width: 70%;
+				right: 0px;
+				background: url("../images/Gift/Image.png") no-repeat center/contain;
+      }
+    }
   }
 
-	.full-wrap{
-		width: calc(100% - 60px);
-		margin-left: auto;
-		margin-right: 0;
-		border: 1px solid $color-black;
-	}
+  .no-pseudo {
+    height: auto;
+    border: none;
 
-	.wrap-content{
-		width: calc(100% - 40px);
-    max-width: 1280px;
-		margin: auto;
-		padding-top: 40px;
-		padding-bottom: 40px;
-		padding-left: 50px;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
 
-		@include min-width(1025px) {
-			padding-left: 0;
-		}
-	}
+  .left-box-bottom-wrap {
+    > .title-tag {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 3.75px;
+      color: $color-white;
+      background-color: $color-orange-1;
+      font-size: 15px;
+    }
 
-  // * ==========================================================================
-  // * 標題
-  // * ==========================================================================
+    > .h2 {
+      margin-top: 13px;
+      font-weight: 900;
+      font-size: 52px;
+      color: $color-primary-1;
+      @include NotoSansTC-txt;
+    }
 
+    > span {
+      margin-top: 8px;
+      display: block;
+      font-weight: 400;
+      font-size: 20px;
+      color: $color-primary-3;
+    }
+  }
+}
 
-  // * ==========================================================================
-  // * 功能按鈕區塊
-  // * ==========================================================================
+.right-box {
+  width: 100%;
+  padding: 49px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-black;
+  border-top: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
+  @include min-width(1025px) {
+    width: 50%;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
 
-  // * ==========================================================================
-  // * 內文區塊
-  // * ==========================================================================
+  .right-box-info {
+    @include min-width(1025px) {
+      width: 450px;
+    }
 
-	.left-box{
-		width: 50%;
-		border-right: 1px solid $color-black;
+    .right-box-info-tag {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 3.75px;
+      font-weight: 700;
+      font-size: 15px;
+      color: $color-white;
+      background-color: $color-orange-1;
+    }
 
-		.left-box-top{
-			height: 50%;
-			position: relative;
-			border-bottom: 1px solid $color-black;
+    > .h2 {
+      margin-top: 1rem;
+      font-weight: 900;
+      font-size: 20px;
+      color: $color-primary-1;
+      @include NotoSansTC-txt;
 
-			&::before {
-				content: "";
-				width: 139px;
-				height: 73px;
-				display: block;
-				position: absolute;
-				bottom: 0px;
-				left: 0px;
-				background: url("../images/Svg/Gift/Pattern_1.svg") no-repeat
-					center/cover;
-			}
-		
-			&:after {
-				content: "";
-				width: 212px;
-				height: 186px;
-				display: block;
-				position: absolute;
-				bottom: 0px;
-				right: 0px;
-				background: url("../images/Svg/Gift/Pattern_2.svg") no-repeat
-					center/cover;
-			}
-		}
-
-		.left-box-bottom{
-			height: 50%;
-			position: relative;
-
-			&::before {
-				content: "";
-				width: 70%;
-				height: 100%;
-				display: block;
-				position: absolute;
-				right: 0px;
-				background: url("../images/Gift/Image.png") no-repeat
-					center/contain;
-			}
-		}
-
-		.no-pseudo{
-			height: auto;
-			border: none;
-			
-			&::before{
-				display: none;
-			}
-			&::after{
-				display: none;
-			}
-		}
-
-		.left-box-bottom-wrap{
-			>.title-tag{
-				display: inline-block;
-				padding: 5px 9px;
-				border-radius: 3.75px;
-				color: $color-white;
-				background-color: $color-orange-1;
-				font-size: 15px;
-			}
-
-			>.h2{
-				margin-top: 13px;
-				font-weight: 900;
-				font-size: 52px;
-				color: $color-primary-1;
-				@include NotoSansTC-txt;
-			}
-
-			>span{
-				margin-top: 8px;
-				display: block;
-				font-weight: 400;
-				font-size: 20px;
-				color: $color-primary-3;
-			}
-		}
-	}
-
-	.right-box{
-		width: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		.right-box-info{
-			width: 450px;
-
-			.right-box-info-tag{
-				display: inline-block;
-				padding: 5px 9px;
-				border-radius: 3.75px;
-				font-weight: 700;
-				font-size: 15px;
-				color: $color-white;
-				background-color: $color-orange-1;
-			}
-
-			>.h2{
-				margin-top: 1rem;
-				font-weight: 900;
+			@include min-width(1025px) {
 				font-size: 38px;
-				color: $color-primary-1;
-				@include NotoSansTC-txt;
-
-				>span{
-					display: block;
-					font-size: 52px;
-					color: $color-primary-1;
-				}
 			}
 
-			>span{
-				margin-top: 1rem;
-				display: block;
-				font-weight: 400;
-				font-size: 20px;
-				color: $color-primary-3;
-			}
-		}
-
-		&.d-block{
-			display: block;
-
-			.right-box-top{
-				width: 100%;
-				height: 355px;
-	
-				position: relative;
-	
-				&::before {
-					content: "";
-					width: 156px;
-					height: 176px;
-					display: block;
-					position: absolute;
-					bottom: 0px;
-					left: 0px;
-					background: url("../images/Svg/Film/Pattern_1.svg") no-repeat
-						center/cover;
-				}
-			
-				&:after {
-					content: "";
-					width: 83px;
-					height: 60px;
-					display: block;
-					position: absolute;
-					bottom: 0px;
-					right: 0px;
-					background: url("../images/Svg/Film/Pattern_2.svg") no-repeat
-						center/cover;
-				}
-
-				.right-box-top-info{
-					height: 100%;
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-
-					.right-box-top-info-title{
-						font-weight: 700;
-						font-size: 85px;
-						color: $color-orange-1;
-						@include roboto-txt;
-					}
-
-					.right-box-top-info-subtitle{
-						font-weight: 400;
-						font-size: 32px;
-						color: $color-gray-2;
-						@include roboto-txt;
-
-						>span{
-							font-size: 25px;
-							color: $color-gray-6;
-						}
-					}
-				}
-			}
-		}
-
-		.right-box-bottom{
-			height: calc(100% - 355px);
-
-			>a{
-				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-
-				&:after{
-					content: "";
-					width: 88px;
-					height: 88px;
-					position: absolute;
-					display: block;
-					background: url("../images/Svg/Film/Play_Normal.svg") no-repeat
-          center/cover;
-				}
-
-				>figure{
-					width: 100%;
-					height: 100%;
-					overflow: hidden;
-					position: relative;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					>img{
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						transform: scale(1);
-						transition: 0.3s;
-					}
-
-					>figcaption{
-						position: absolute;
-						top: 50%;
-						margin-top: 60px;
-						color: $color-white;
-						opacity: 0;
-						transition: .2s;
-					}
-				}
+      > span {
+        display: block;
+        font-size: 28px;
+        color: $color-primary-1;
 
 				@include min-width(1025px) {
-
-					&:hover{
-						>figure{
-							overflow: hidden;
-	
-							>img{
-								transform: scale(1.2);
-								transition: 0.3s;
-							}
-
-							>figcaption{
-								opacity: 1;
-							}
-						}
-					}
+					font-size: 52px;
 				}
+      }
+    }
+
+    > span {
+      margin-top: 1rem;
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      color: $color-primary-3;
+
+			@include min-width(1025px) {
+				font-size: 20px;
 			}
-		}
-	}
- 
+    }
+  }
 
-  // * ==========================================================================
-  // * 單頁式網站的區塊
-  // * ==========================================================================
+  &.d-block {
+    display: block;
 
+    .right-box-top {
+      width: 100%;
+      height: 355px;
 
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 156px;
+        height: 176px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: url("../images/Svg/Film/Pattern_1.svg") no-repeat
+          center/cover;
+      }
+
+      &:after {
+        content: "";
+        width: 83px;
+        height: 60px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: url("../images/Svg/Film/Pattern_2.svg") no-repeat
+          center/cover;
+      }
+
+      .right-box-top-info {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .right-box-top-info-title {
+          font-weight: 700;
+          font-size: 85px;
+          color: $color-orange-1;
+          @include roboto-txt;
+        }
+
+        .right-box-top-info-subtitle {
+          font-weight: 400;
+          font-size: 32px;
+          color: $color-gray-2;
+          @include roboto-txt;
+
+          > span {
+            font-size: 25px;
+            color: $color-gray-6;
+          }
+        }
+      }
+    }
+  }
+
+  .right-box-bottom {
+    height: calc(100% - 355px);
+
+    > a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 88px;
+        height: 88px;
+        position: absolute;
+        display: block;
+        background: url("../images/Svg/Film/Play_Normal.svg") no-repeat
+          center/cover;
+      }
+
+      > figure {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1);
+          transition: 0.3s;
+        }
+
+        > figcaption {
+          position: absolute;
+          top: 50%;
+          margin-top: 60px;
+          color: $color-white;
+          opacity: 0;
+          transition: 0.2s;
+        }
+      }
+
+      @include min-width(1025px) {
+        &:hover {
+          > figure {
+            overflow: hidden;
+
+            > img {
+              transform: scale(1.2);
+              transition: 0.3s;
+            }
+
+            > figcaption {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// * ==========================================================================
+// * 單頁式網站的區塊
+// * ==========================================================================

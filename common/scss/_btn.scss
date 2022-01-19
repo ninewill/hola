@@ -13,7 +13,7 @@
 
 .icon-youtube {
   background: url("../images/icon/YouTube/Normal.svg") no-repeat center/cover;
-	transition: 0.1s;
+  transition: 0.1s;
   @include hidetext;
 }
 
@@ -45,70 +45,71 @@
 //分享按鈕
 
 .topnav-item {
-	position: absolute;
-	top: 0;
-	right: 0;
-	order: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  order: 1;
   display: flex;
-	justify-content: flex-end;
+  justify-content: flex-end;
 
-	@include min-width(1025px) {
-		position: static;
-		order: 2;
-		flex-direction: column;
-	}
+  @include min-width(1025px) {
+    position: static;
+    order: 2;
+    flex-direction: column;
+  }
 }
 
-.hover-text{
-	display: none;
+.hover-text {
+  display: none;
 
-	@include min-width(1025px) {
-		border-radius: 5px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: absolute;
-		top: 10px;
-		z-index: 1;
-		opacity: 0;
-		line-height: 24px;
-		font-weight: 700;
-		font-size: 14px;
-		color: $color-white;
-		background-color: $color-primary-2;
-		transform: translateX(-35px);
-		transition: 0.2s;
-	
-		&.hover-text-yt{
-			width: 66px;
-			height: 24px;
-		}
-	
-		&.hover-text-gift{
-			width: 40px;
-			height: 24px;
-		}
-	}
+  @include min-width(1025px) {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    opacity: 0;
+    line-height: 24px;
+    font-weight: 700;
+    font-size: 14px;
+    color: $color-white;
+    background-color: $color-primary-2;
+    transform: translateX(-35px);
+    transition: 0.2s;
+
+    &.hover-text-yt {
+      width: 66px;
+      height: 24px;
+    }
+
+    &.hover-text-gift {
+      width: 40px;
+      height: 24px;
+    }
+  }
 }
 
 //youtube icon
-.youtube{
-	position: relative;
-	z-index: 5;
+.youtube {
+  position: relative;
+  z-index: 5;
   transition: 0.1s;
 
-	@include min-width(1025px) {
-		&:hover {
-			.icon-youtube {
-				background: url("../images/icon/YouTube/Hover.svg") no-repeat center/cover;
-			}
-	
-			.hover-text{
-				opacity: 1;
-				transform: translateX(-70px)
-			}
-		}
-	}
+  @include min-width(1025px) {
+    &:hover {
+      .icon-youtube {
+        background: url("../images/icon/YouTube/Hover.svg") no-repeat
+          center/cover;
+      }
+
+      .hover-text {
+        opacity: 1;
+        transform: translateX(-70px);
+      }
+    }
+  }
 }
 
 //share icon
@@ -116,46 +117,45 @@
   position: relative;
   z-index: 10;
 
-	@include min-width(1025px) {
+  @include min-width(1025px) {
+    &:hover {
+      .icon-share {
+        background: url("../images/icon/Share/Hover.svg") no-repeat center/cover;
 
-  &:hover {
-    .icon-share {
-      background: url("../images/icon/Share/Hover.svg") no-repeat center/cover;
-
-      &:before {
-        content: "";
-        width: 56px;
-        height: 40px;
-        display: block;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        right: -10px;
-        border-radius: 0 20px 20px 0;
-        background-color: $color-white;
+        &:before {
+          content: "";
+          width: 56px;
+          height: 40px;
+          display: block;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          right: -10px;
+          border-radius: 0 20px 20px 0;
+          background-color: $color-white;
+        }
       }
-    }
 
-    .share-list {
-      > li {
-        &:nth-child(1) {
-          &:before {
-            content: "";
-            width: 56px;
-            height: 40px;
-            display: block;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: -10px;
-            border-radius: 20px 0 0 20px;
-            background-color: $color-white;
+      .share-list {
+        > li {
+          &:nth-child(1) {
+            &:before {
+              content: "";
+              width: 56px;
+              height: 40px;
+              display: block;
+              position: absolute;
+              z-index: -1;
+              top: 0;
+              left: -10px;
+              border-radius: 20px 0 0 20px;
+              background-color: $color-white;
+            }
           }
         }
       }
     }
   }
-	}
 }
 .share-list {
   display: flex;
@@ -204,40 +204,39 @@
 
 //gift icon
 .gift {
-	position: relative;
-	z-index: 5;
+  position: relative;
+  z-index: 5;
   transition: 0.1s;
 
-	@include min-width(1025px) {
+  @include min-width(1025px) {
+    &:hover {
+      .icon-gift {
+        background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
+      }
 
-		&:hover {
-			.icon-gift {
-				background: url("../images/icon/Gift/Hover.svg") no-repeat center/cover;
-			}
-	
-			.hover-text{
-				opacity: 1;
-				transform: translateX(-44px)
-			}
-		}
-	}
+      .hover-text {
+        opacity: 1;
+        transform: translateX(-44px);
+      }
+    }
+  }
 }
 
 //PC切換mobile
-.switch-icon{
-	display: block;
+.switch-icon {
+  display: block;
 
-	@include min-width(1025px) {
-		display: none;
-	}
+  @include min-width(1025px) {
+    display: none;
+  }
 }
 
-.re-switch-icon{
-	display: none;
+.re-switch-icon {
+  display: none;
 
-	@include min-width(1025px) {
-		display: block;
-	}
+  @include min-width(1025px) {
+    display: block;
+  }
 }
 
 .video-btn {
@@ -305,16 +304,16 @@
 }
 
 .portfolio-btn {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
   margin-top: 28px;
 
-	@include min-width(1025px) {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		justify-content: flex-end;
-	}
+  @include min-width(1025px) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    justify-content: flex-end;
+  }
 
   > a {
     padding: 11.5px 39px;
@@ -349,8 +348,7 @@
   }
 }
 
-
-.back-btn{
+.back-btn {
   margin-top: 12px;
 
   > a {
@@ -363,7 +361,7 @@
     transition: 0.1s;
 
     @include min-width(1025px) {
-			padding: 11.5px 39px;
+      padding: 11.5px 39px;
 
       &:hover {
         background-color: $color-orange-1;
@@ -388,8 +386,8 @@
   }
 }
 
-.back-btn-m{
-	margin-top: 22px;
+.back-btn-m {
+  margin-top: 22px;
 
   > a {
     display: inline-block;
@@ -414,8 +412,14 @@
 }
 
 .immediately-btn {
-	display: flex;
-  margin-top: 100px;
+  display: flex;
+  margin-top: 45px;
+  justify-content: center;
+
+  @include min-width(1025px) {
+		margin-top: 100px;
+    justify-content: flex-start;
+  }
 
   > a {
     padding: 14px 47px;
@@ -450,11 +454,11 @@
   }
 }
 
-.register-btn{
-	display: flex;
-	justify-content: center;
+.register-btn {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
-	margin-bottom: 47px;
+  margin-bottom: 47px;
 
   > a {
     padding: 11.5px 65px;
@@ -489,10 +493,9 @@
   }
 }
 
-
-.lottery-btn{
-	display: flex;
-	justify-content: flex-end;
+.lottery-btn {
+  display: flex;
+  justify-content: flex-end;
   margin-top: 70px;
 
   > a {
@@ -528,12 +531,11 @@
   }
 }
 
+.video-btn2 {
+  margin-top: 62px;
 
-.video-btn2{
-	margin-top: 62px;
-
-	> a {
-		padding: 14px;
+  > a {
+    padding: 14px;
     display: inline-block;
     background-color: $color-primary-1;
     font-weight: 700;
