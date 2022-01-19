@@ -532,7 +532,13 @@
 }
 
 .video-btn2 {
+	display: flex;
+	justify-content: center;
   margin-top: 62px;
+
+	@include min-width(1025px) {
+		display: block;
+	}
 
   > a {
     padding: 14px;
