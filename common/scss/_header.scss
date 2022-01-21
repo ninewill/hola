@@ -28,12 +28,22 @@ header {
   width: 24px;
   height: 24px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 25px;
   display: block;
   background: url("../images/icon/Home/Normal.svg") no-repeat center/cover;
   transition: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
   @include hidetext;
+
+	@include min-width(376px) {
+		margin-top: 50px;
+	}
+
+	@include min-width(768px) {
+		margin-top: 100px;
+	}
+
+
 
   //首頁當前頁面狀態
   &.current {
@@ -54,7 +64,11 @@ header {
 }
 
 .mainheader-menu {
-  margin-top: 64px;
+  margin-top: 20px;
+
+	@include min-width(376px) {
+		margin-top: 64px;
+	}
 
   > li {
     position: relative;
@@ -62,8 +76,12 @@ header {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     writing-mode: vertical-rl;
+
+		@include min-width(376px) {
+			margin-bottom: 40px;
+		}
 
     &:last-child {
       margin-bottom: 0;
@@ -105,9 +123,13 @@ header {
       width: 8px;
       height: 8px;
       position: absolute;
-      bottom: -25px;
+      bottom: -15px;
       display: block;
       background: url("../images/icon/Pattern/Star.svg") no-repeat center/cover;
+
+			@include min-width(376px) {
+				bottom: -25px;
+			}
     }
 
     > a {

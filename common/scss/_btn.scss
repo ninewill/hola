@@ -388,6 +388,11 @@
 
 .back-btn-m {
   margin-top: 22px;
+	display: block;
+
+	@include min-width(1025px) {
+		display: none;
+	}
 
   > a {
     display: inline-block;

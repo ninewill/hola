@@ -8,18 +8,20 @@
 //翻牌效果
 .student-page-wiper {
   height: 208px;
+	border-top: 1px solid $color-black;
+	border-bottom: 1px solid $color-black;
 
 	@include min-width(1025px) {
-		height: 346px;
+		border-top: none;
+		height: 351px;
 	}
 }
 
 .student-page-wiper2 {
   height: 146px;
-  border-top: 1px solid $color-black;
 
 	@include min-width(1025px) {
-		height: 280.78px;
+		height: 293px;
 	}
 
   .swiper-wrapper {
@@ -27,6 +29,7 @@
 
     img {
       height: 100%;
+			object-fit: cover;
     }
   }
 }
