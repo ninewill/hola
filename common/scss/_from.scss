@@ -15,72 +15,117 @@
   z-index: 10001;
 }
 .cd-popup.is-visible {
+	display: flex;
+	align-items: center;
+	justify-content: center;
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s 0s, visibility 0s 0s;
 }
 
 .cd-popup-container {
-  display: flex;
-  position: relative;
-  width: 90%;
-  max-width: 1053px;
-  height: 673px;
-  margin: 4em auto;
-  border: 1px solid $color-black;
-  background: $color-white;
-  text-align: center;
-  transform: translateY(100%);
-  -webkit-backface-visibility: hidden;
+	width: 350px;
+	height: 546px;
+	overflow-y: auto;
+	margin: 4em auto;
+	border: 1px solid $color-black;
+	background: $color-white;
+	display: block;
   transition-property: transform;
   transition-duration: 0.3s;
 
+	@include min-width(1025px) {
+		display: flex;
+		position: relative;
+		width: 90%;
+		max-width: 1053px;
+		height: 673px;
+
+		text-align: center;
+		transform: translateY(100%);
+		-webkit-backface-visibility: hidden;
+  }
+
   //LEFT
   .cd-popup-container-left {
-    width: 50%;
-    height: 100%;
     border-right: 1px solid $color-black;
+
+		@include min-width(1025px) {
+			width: 50%;
+			height: 100%;
+		}
   }
 
   //LEFT TOP
   .cd-popup-container-left-top {
-    padding: 37px;
+    padding: 15px;
     background-color: $color-orange-1;
+
+		@include min-width(1025px) {
+			padding: 37px;
+		}
   }
 
   .form-tag {
+		width: 97px;
+		margin: 0 auto;
+		text-align: center;
     padding: 3px 5px;
-    display: inline-block;
     background-color: $color-white;
     border-radius: 5px;
     font-weight: 400;
     font-size: 14px;
     color: $color-orange-1;
+
+		@include min-width(1025px) {
+			display: inline-block;
+		}
   }
 
   .form-title {
+		margin-top: 0.5rem;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 18px;
     color: $color-white;
+		text-align: center;
     @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			margin-top: 0;
+			font-size: 30px;
+		}
   }
 
   .form-subtitle {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 14px;
     color: $color-white;
+		text-align: center;
+
+		@include min-width(1025px) {
+			font-size: 20px;
+		}
   }
 
   //LEFT BOTTOM
   .cd-popup-container-left-bottom {
     position: relative;
-    margin-top: 2rem;
+
+		@include min-width(1025px) {
+			margin-top: 2rem;
+		}
   }
 
   //RIGHT
   .cd-popup-container-right {
-    width: 50%;
-    padding: 32px 65px 54px 65px;
+		padding: 24px;
+		margin-top: 3rem;
+
+		@include min-width(1025px) {
+			width: 50%;
+			margin-top: 0;
+			padding: 32px 65px 54px 65px;
+		}
   }
 
   .cd-popup-container-right-top {
@@ -88,14 +133,24 @@
 
   .cd-popup-container-right-top-title {
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     color: $color-gray-6;
+		text-align: center;
+
+		@include min-width(1025px) {
+			font-size: 26px;
+		}
   }
 
   .cd-popup-container-right-top-subtitle {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     color: $color-gray-5;
+		text-align: center;
+
+		@include min-width(1025px) {
+			font-size: 18px;
+		}
   }
 
   //表單
@@ -103,7 +158,11 @@
     margin-top: 18px;
 
     fieldset {
-      margin-top: 12px;
+      margin-top: 20px;
+
+			@include min-width(1025px) {
+				font-size: 12px;
+			}
     }
 
 		select,
@@ -203,25 +262,54 @@
 
 //關閉X按鈕
 .cd-popup-close {
-  position: absolute;
-  top: 31px;
-  right: 28px;
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  color: transparent;
-  white-space: nowrap;
+	position: absolute;
+	top: 13%;
+	right: 5%;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	overflow: hidden;
+	text-indent: 100%;
+	color: transparent;
+	white-space: nowrap;
+	z-index: 10;
+
+	@include min-width(1025px) {
+		top: 31px;
+		right: 28px;
+  }
 }
-.cd-popup-container .cd-popup-close::before,
-.cd-popup-container .cd-popup-close::after {
+
+.cd-popup-close-pc{
+	display: none;
+	
+	@include min-width(1025px) {
+		display: block;
+  }
+}
+
+.cd-popup-close-m{
+	display: block;
+
+	@include min-width(1025px) {
+		display: none;
+  }
+}
+
+
+
+.cd-popup-close::before,
+.cd-popup-close::after {
   content: "";
   position: absolute;
   top: 12px;
   width: 29px;
   height: 2px;
-  background-color: $color-primary-1;
+	background-color: $color-white;
+
+	@include min-width(1025px) {
+		background-color: $color-primary-1;
+	}
 }
 .cd-popup-close {
   &::before {
@@ -237,5 +325,9 @@
 }
 
 .is-visible .cd-popup-container {
-  transform: translateY(10%);
+  transform: translateY(0%);
+
+	@include min-width(1025px) {
+		transform: translateY(0%);
+	}
 }
