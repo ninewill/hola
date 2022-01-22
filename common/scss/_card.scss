@@ -726,6 +726,7 @@
 
 .portfolio-page-m {
   display: block;
+	margin-top: 24px;
   border: 1px solid $color-black;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
@@ -1457,8 +1458,12 @@
     height: 100%;
 
     > img {
-      height: 100%;
       object-fit: cover;
+
+			@include min-width(1025px) {
+				height: 100%;
+			}
+
     }
   }
 }
@@ -1874,7 +1879,7 @@
         margin-top: 20px;
 
         .figcaption-title {
-          font-weight: 400;
+          font-weight: 700;
           font-size: 16px;
           color: $color-primary-1;
         }
@@ -1892,7 +1897,7 @@
 .lottery-page-right {
   width: 100%;
   margin-left: 0;
-  margin-top: 60px;
+  margin-top: 70px;
 
   @include min-width(1025px) {
     width: 50%;
@@ -1953,7 +1958,7 @@
     margin-top: 32px;
 
     .figcaption-title {
-      font-weight: 400;
+      font-weight: 700;
       font-size: 20px;
       color: $color-primary-1;
     }
