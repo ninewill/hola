@@ -590,10 +590,10 @@ $(function () {
 		direction: 'vertical',
 		effect: "flip",
 		grabCursor: true,
-		//autoplay: {
-		//	delay: 5000,
-		//	disableOnInteraction: false,
-		//},
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
 		loop: true,
 	});
 
@@ -601,10 +601,10 @@ $(function () {
 		direction: 'vertical',
 		effect: "flip",
 		grabCursor: true,
-		//autoplay: {
-		//	delay: 5000,
-		//	disableOnInteraction: false,
-		//},
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: false,
+		},
 		loop: true,
 	});
 

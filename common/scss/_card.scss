@@ -401,8 +401,11 @@
     }
 
     > img {
-      height: 100%;
-      object-fit: cover;
+			object-fit: cover;
+			
+			@include min-width(1025px) {
+				height: 100%;
+			}
     }
   }
 }
@@ -610,8 +613,11 @@
     height: 100%;
 
     > img {
-      height: 100%;
       object-fit: cover;
+
+			@include min-width(1025px) {
+				height: 100%;
+			}
     }
 
     > figcaption {
@@ -1187,19 +1193,20 @@
       margin-top: 0;
       margin-bottom: 0;
       color: $color-orange-1;
+			font-weight: 700;
       font-size: 18px;
     }
     > span {
       display: block;
       color: $color-primary-3;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 }
 
 .student-page-m-list-right {
   > ul {
-    width: 145px;
+    width: 150px;
     height: 100%;
     display: flex;
     flex-direction: column;
