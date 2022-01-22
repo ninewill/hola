@@ -160,7 +160,11 @@
   }
 
 	.left-box-bottom-bg{
-		margin-top: 0;
+		margin-top: 39px;
+
+		@include min-width(1025px) {
+			margin-top: 0;
+		}
 	}
 
   .no-pseudo {

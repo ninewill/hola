@@ -1,4 +1,5 @@
 $(function () {
+
   const $window = $(window);
   const $html = $("html");
   const $menu = $("#menu");
@@ -617,10 +618,10 @@ $(function () {
 
 
 	var swiper3 = new Swiper(".popup-swiper-form", {
-		//autoplay: {
-		//	delay: 5000,
-		//	disableOnInteraction: false,
-		//},
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
@@ -769,15 +770,24 @@ $(function () {
 		})
 
 
-		$(".back-btn-page1").click(()=>{
+
+
+
+		const active = new URLSearchParams(window.location.search);
+		const activeIdx = active.get("active");
+
+		if (activeIdx === "1") {
 			$('#page1').addClass("expand");
-		})
-		$(".back-btn-page2").click(()=>{
+
+		} else if (activeIdx === "2") {
 			$('#page2').addClass("expand");
-		})
-		$(".back-btn-page3").click(()=>{
+			console.log($('#page2').addClass("expand"));
+
+		} else if (activeIdx === "3") {
 			$('#page3').addClass("expand");
-		})
+		}else{
+			$('#page1').addClass("expand");
+		}
 
   /*
    * ==========================================================================
@@ -872,4 +882,6 @@ $(function () {
   $window.on("load", function () {
     fixedHeader(screenWidth, scrollTop);
   });
+	
 });
+
