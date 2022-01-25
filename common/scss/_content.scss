@@ -30,11 +30,20 @@
   padding-top: 33px;
   padding-bottom: 33px;
 
+
+	@include min-width(960px) {
+
+	}
+
   @include min-width(1025px) {
-		max-width: 960px;
+		max-width: 780px;
     padding-left: 0;
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+	@include min-width(1200px) {
+    max-width: 960px;
   }
 
   @include min-width(1440px) {

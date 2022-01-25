@@ -11,9 +11,13 @@
 
 .master-card {
   display: flex;
-  margin-right: 40px;
+  margin-right: 30px;
 
-	@include min-width(1480px) {
+	@include min-width(1200px) {
+    margin-right: 40px;
+  }
+
+  @include min-width(1440px) {
     margin-right: 56px;
   }
 
@@ -25,31 +29,39 @@
     margin-top: auto;
     margin-bottom: 0;
 
-		@include min-width(1025px) {
-			margin-top: 3rem;
-		}
+    @include min-width(1025px) {
+      margin-top: 4rem;
+    }
 
-		@include min-width(1440px) {
-			margin-top: 6rem;
-		}
+		@include min-width(1200px) {
+      margin-top: 3rem;
+    }
 
-		@include min-width(1660px) {
-			margin-top: auto;
-		}
+    @include min-width(1440px) {
+      margin-top: 6rem;
+    }
+
+    @include min-width(1660px) {
+      margin-top: auto;
+    }
 
     > figure {
       width: 270px;
       filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
 
-			@include min-width(1025px) {
-				width: 200px;
-			}
+      @include min-width(1025px) {
+        width: 160px;
+      }
+
+      @include min-width(1200px) {
+        width: 200px;
+      }
 
       @include min-width(1440px) {
         width: 220px;
       }
 
-			@include min-width(1660px) {
+      @include min-width(1660px) {
         width: 270px;
       }
     }
@@ -69,15 +81,24 @@
 .master-card-info {
   color: $color-primary-3;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   @include roboto-txt;
+
+	@include min-width(1200px) {
+		font-size: 14px;
+	}
 }
 .master-card-title {
   margin-top: 8px;
   display: flex;
   color: $color-primary-1;
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 18px;
+
+  @include min-width(1200px) {
+    font-weight: 700;
+    font-size: 22px;
+  }
 
   &::before {
     content: "";
@@ -90,21 +111,20 @@
 }
 
 .fixed-text {
-	display: none;
+  display: none;
 
-	@include min-width(1440px) {
-		display: block;
-		position: absolute;
-		right: 0px;
-		bottom: 95px;
-		font-weight: 400;
-		font-size: 14px;
-		writing-mode: vertical-rl;
-		text-orientation: sideways;
-		transform: rotate(-180deg);
-		@include roboto-txt;
-	}
-
+  @include min-width(1440px) {
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 95px;
+    font-weight: 400;
+    font-size: 14px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(-180deg);
+    @include roboto-txt;
+  }
 
   > span {
     color: $color-primary-1;
@@ -431,11 +451,11 @@
     }
 
     > img {
-			object-fit: cover;
-			
-			@include min-width(1025px) {
-				height: 100%;
-			}
+      object-fit: cover;
+
+      @include min-width(1025px) {
+        height: 100%;
+      }
     }
   }
 }
@@ -645,9 +665,9 @@
     > img {
       object-fit: cover;
 
-			@include min-width(1025px) {
-				height: 100%;
-			}
+      @include min-width(1025px) {
+        height: 100%;
+      }
     }
 
     > figcaption {
@@ -692,9 +712,9 @@
       > img {
         object-fit: cover;
 
-				@include min-width(1025px) {
-					height: 100%;
-				}
+        @include min-width(1025px) {
+          height: 100%;
+        }
       }
     }
   }
@@ -756,7 +776,7 @@
 
 .portfolio-page-m {
   display: block;
-	margin-top: 24px;
+  margin-top: 24px;
   border: 1px solid $color-black;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
@@ -1039,9 +1059,9 @@
     }
 
     > img {
-			@include min-width(1025px) {
-				height: 100%;
-			}
+      @include min-width(1025px) {
+        height: 100%;
+      }
     }
   }
 
@@ -1154,8 +1174,8 @@
 
 .student-page-grid3 {
   width: 100%;
-	position: relative;
-	z-index: 2;
+  position: relative;
+  z-index: 2;
 
   @include min-width(1025px) {
     width: 40%;
@@ -1224,7 +1244,7 @@
       margin-top: 0;
       margin-bottom: 0;
       color: $color-orange-1;
-			font-weight: 700;
+      font-weight: 700;
       font-size: 18px;
     }
     > span {
@@ -1403,24 +1423,26 @@
         }
       }
 
-			&:nth-child(1){
-				&.current {
-					background: url("../images/Lecture/1/Pessed.jpg") no-repeat center/cover;
-				}
-			}
-			&:nth-child(2){
-				&.current {
-					background: url("../images/Lecture/2/Pessed-2.jpg") no-repeat center/cover;
-				}
-			}
-			&:nth-child(3){
-				&.current {
-					background: url("../images/Lecture/3/Pessed-3.jpg") no-repeat center/cover;
-				}
-			}
+      &:nth-child(1) {
+        &.current {
+          background: url("../images/Lecture/1/Pessed.jpg") no-repeat
+            center/cover;
+        }
+      }
+      &:nth-child(2) {
+        &.current {
+          background: url("../images/Lecture/2/Pessed-2.jpg") no-repeat
+            center/cover;
+        }
+      }
+      &:nth-child(3) {
+        &.current {
+          background: url("../images/Lecture/3/Pessed-3.jpg") no-repeat
+            center/cover;
+        }
+      }
 
       &.current {
-
         > a {
           height: 100%;
           padding: 16px;
@@ -1477,12 +1499,10 @@
 }
 
 .lecture-page-grid-photo {
-
-
-	@include min-width(1025px) {
-		width: 15%;
-		border-right: 1px solid $color-black;
-	}
+  @include min-width(1025px) {
+    width: 15%;
+    border-right: 1px solid $color-black;
+  }
 
   > figure {
     height: 100%;
@@ -1490,10 +1510,9 @@
     > img {
       object-fit: cover;
 
-			@include min-width(1025px) {
-				height: 100%;
-			}
-
+      @include min-width(1025px) {
+        height: 100%;
+      }
     }
   }
 }
@@ -1515,22 +1534,20 @@
 }
 
 .lecture-page-grid2 {
- 
-
-	@include min-width(1025px) {
-		width: 30%;
-		border-right: 1px solid $color-black;
+  @include min-width(1025px) {
+    width: 30%;
+    border-right: 1px solid $color-black;
   }
 }
 .lecture-page-grid2-top {
-	padding: 21px;
-	border-top: 1px solid $color-black;
-	border-bottom: 1px solid $color-black;
+  padding: 21px;
+  border-top: 1px solid $color-black;
+  border-bottom: 1px solid $color-black;
 
-	@include min-width(1025px) {
-		padding: 54px;
-		border-top: none;
-	}
+  @include min-width(1025px) {
+    padding: 54px;
+    border-top: none;
+  }
 
   > .lecture-page-grid2-top-tag {
     margin-left: 1.5rem;
@@ -1577,9 +1594,9 @@
 .lecture-page-grid2-bottom {
   padding: 21px;
 
-	@include min-width(1025px) {
-		padding: 54px;
-	}
+  @include min-width(1025px) {
+    padding: 54px;
+  }
 
   > .lecture-page-grid2-bottom-title {
     display: flex;
@@ -1641,57 +1658,56 @@
 }
 
 .lecture-page-grid3 {
-	border-top: 1px solid $color-black;
+  border-top: 1px solid $color-black;
 
-	@include min-width(1025px) {
-		width: 40%;
-		border-top: none;
-	}
+  @include min-width(1025px) {
+    width: 40%;
+    border-top: none;
+  }
 
   > figure {
     &.lecture-page-grid3-1 {
-			display: none;
+      display: none;
 
-
-			@include min-width(1025px) {
-				height: 346px;
-				border-bottom: 1px solid $color-black;
-				display: block;
-			}
+      @include min-width(1025px) {
+        height: 346px;
+        border-bottom: 1px solid $color-black;
+        display: block;
+      }
     }
 
     &.lecture-page-grid3-2 {
       display: none;
 
-			@include min-width(1025px) {
-				height: calc(100% - 346px);
-				display: block;
-			}
+      @include min-width(1025px) {
+        height: calc(100% - 346px);
+        display: block;
+      }
     }
 
-		&.lecture-page-grid3-3 {
-			height: 208px;
+    &.lecture-page-grid3-3 {
+      height: 208px;
       display: block;
-			border-bottom: 1px solid $color-black;
+      border-bottom: 1px solid $color-black;
 
-			@include min-width(1025px) {
-				display: none;
-			}
+      @include min-width(1025px) {
+        display: none;
+      }
     }
 
-		&.lecture-page-grid3-4 {
-			height: 146px;
+    &.lecture-page-grid3-4 {
+      height: 146px;
       display: block;
 
-			@include min-width(1025px) {
-				display: none;
-			}
+      @include min-width(1025px) {
+        display: none;
+      }
     }
 
     > img {
       width: 100%;
       height: 100%;
-			object-fit: cover;
+      object-fit: cover;
     }
   }
 }
