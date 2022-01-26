@@ -170,6 +170,19 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   }
 
+	@include min-width(1025px) {
+		min-height: 650px;
+	}
+
+	@include min-width(1200px) {
+		min-height: 600px;
+	}
+
+	@include min-width(1440px) {
+		min-height: 650px;
+	}
+
+
   .page {
     position: relative;
     border-right: 1px solid $color-black;
@@ -226,6 +239,16 @@
     font-size: 18px;
     letter-spacing: 3px;
     cursor: pointer;
+
+		@include min-width(1200px) {
+			margin-left: -1px;
+			font-size: 16px;
+		}
+
+		@include min-width(1440px) {
+			margin-left: 0px;
+			font-size: 18px;
+		}
   }
 
   .page-tab {
@@ -238,6 +261,14 @@
     font-weight: 500;
     font-size: 14px;
     @include roboto-txt;
+
+		@include min-width(1200px) {
+			width: 22px;
+		}
+
+		@include min-width(1440px) {
+			width: 28px;
+		}
 
     &::after {
       content: "";
@@ -258,6 +289,21 @@
     height: 68vh;
     color: rgba(255, 255, 255, 0);
     overflow: hidden;
+
+		@include min-width(1025px) {
+			width: 3.2vw;
+			min-height: 650px;
+		}
+
+		@include min-width(1200px) {
+			width: 2.2vw;
+			min-height: 600px;
+		}
+	
+		@include min-width(1440px) {
+			min-height: 650px;
+		}
+	
 
     > .page-title {
       display: inline-block;
@@ -377,6 +423,13 @@
   width: 100%;
 
   @include min-width(1025px) {
+  }
+
+	@include min-width(1200px) {
+    width: calc(100% - 200px);
+  }
+
+	@include min-width(1440px) {
     width: calc(100% - 248px);
   }
 }
@@ -386,6 +439,14 @@
   padding-top: 56px;
 
   @include min-width(1025px) {
+    padding: 20px;
+  }
+
+	@include min-width(1200px) {
+    padding: 20px 35px;
+  }
+
+	@include min-width(1440px) {
     padding: 20px 56px;
   }
 
@@ -401,6 +462,14 @@
   @include min-width(1025px) {
     height: 192px;
     margin-top: 95px;
+    font-size: 28px;
+  }
+
+	@include min-width(1200px) {
+    font-size: 26px;
+  }
+
+	@include min-width(1440px) {
     font-size: 32px;
   }
 
@@ -426,7 +495,11 @@
   font-weight: 700;
   font-size: 33px;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
+    font-size: 45px;
+  }
+
+	@include min-width(1440px) {
     font-size: 63px;
   }
 
@@ -441,6 +514,16 @@
   @include min-width(1025px) {
     width: 248px;
   }
+
+	@include min-width(1200px) {
+    width: 200px;
+  }
+
+	@include min-width(1440px) {
+    width: 248px;
+  }
+
+
 
   > figure {
     height: 100%;
@@ -464,10 +547,32 @@
   display: flex;
   justify-content: space-between;
   padding: 45px;
+
+	@include min-width(1025px) {
+		padding: 20px;
+		margin-top: 2.5rem;
+	}
+
+	@include min-width(1200px) {
+		margin-top: 1.5rem;
+	}
+
+	@include min-width(1440px) {
+		margin-top: 0;
+		padding: 45px;
+	}
 }
 
 .page-collect-img {
   filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.25));
+
+	@include min-width(1025px) {
+		width: 80px;
+	}
+
+	@include min-width(1200px) {
+		width: auto;
+	}
 }
 
 .page-content-info-bottom-info {
@@ -475,6 +580,14 @@
     color: $color-primary-1;
     font-weight: 700;
     font-size: 18px;
+
+		@include min-width(1025px) {
+			font-size: 16px;
+		}
+
+		@include min-width(1200px) {
+			font-size: 18px;
+		}
   }
   > span {
     display: flex;
@@ -504,8 +617,12 @@
 
   @include min-width(1025px) {
     padding: 0;
-    height: 450px;
+    height: 520px;
     margin-top: 88px;
+  }
+
+	@include min-width(1200px) {
+    height: 450px;
   }
 
   &::after {
@@ -574,6 +691,14 @@
     @include NotoSansTC-txt;
 
     @include min-width(1025px) {
+      font-size: 26px;
+    }
+
+		@include min-width(1200px) {
+      font-size: 30px;
+    }
+
+		@include min-width(1440px) {
       font-size: 40px;
     }
   }

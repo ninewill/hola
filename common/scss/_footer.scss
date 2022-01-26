@@ -7,12 +7,12 @@
 
 
 .footer {
-	display: none;
+	display: block;
+	margin-left: 48px;
+	background-color: $color-gray;
 
-	@include max-width(1025px) {
-		display: block;
-		margin-left: 48px;
-		background-color: $color-gray;
+	@include min-width(1025px) {
+		display: none;
 	}
 }
 

@@ -705,7 +705,7 @@ $(function () {
     playInterval = setTimeout(play, PlayTimer);
   }
 
-	if ($window.width() >= 768) {
+	if ($window.width() >= 1025) {
 		play();
 	}
 

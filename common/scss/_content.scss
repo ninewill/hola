@@ -81,7 +81,16 @@
   padding-left: 50px;
 
   @include min-width(1025px) {
+		max-width: 860px;
     padding-left: 0;
+  }
+
+	@include min-width(1200px) {
+		max-width: 1024px;
+  }
+
+	@include min-width(1440px) {
+    max-width: 1280px;
   }
 }
 
