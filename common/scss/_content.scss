@@ -230,6 +230,14 @@
       @include NotoSansTC-txt;
 
 			@include min-width(1025px) {
+				font-size: 28px;
+			}
+
+			@include min-width(1200px) {
+				font-size: 36px;
+			}
+
+			@include min-width(1440px) {
 				font-size: 52px;
 			}
     }
@@ -242,6 +250,14 @@
       color: $color-primary-3;
 
 			@include min-width(1025px) {
+				font-size: 14px;
+			}
+
+			@include min-width(1200px) {
+				font-size: 16px;
+			}
+
+			@include min-width(1440px) {
 				font-size: 20px;
 			}
     }
@@ -380,20 +396,44 @@
 	
 					.right-box-top-info-title {
 						font-weight: 700;
-						font-size: 85px;
+						font-size: 52px;
 						color: $color-orange-1;
 						@include roboto-txt;
+
+						@include min-width(1200px) {
+							font-size: 65px;
+						}
+
+						@include min-width(1440px) {
+							font-size: 85px;
+						}
 					}
 	
 					.right-box-top-info-subtitle {
 						font-weight: 400;
-						font-size: 32px;
+						font-size: 16px;
 						color: $color-gray-2;
 						@include roboto-txt;
+
+						@include min-width(1200px) {
+							font-size: 18px;
+						}
+
+						@include min-width(1440px) {
+							font-size: 32px;
+						}
 	
 						> span {
-							font-size: 25px;
+							font-size: 16px;
 							color: $color-gray-6;
+
+							@include min-width(1200px) {
+								font-size: 18px;
+							}
+	
+							@include min-width(1440px) {
+								font-size: 32px;
+							}
 						}
 					}
 				}

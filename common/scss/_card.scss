@@ -13,7 +13,7 @@
   display: flex;
   margin-right: 30px;
 
-	@include min-width(1200px) {
+  @include min-width(1200px) {
     margin-right: 40px;
   }
 
@@ -33,7 +33,7 @@
       margin-top: 4rem;
     }
 
-		@include min-width(1200px) {
+    @include min-width(1200px) {
       margin-top: 3rem;
     }
 
@@ -84,9 +84,9 @@
   font-size: 12px;
   @include roboto-txt;
 
-	@include min-width(1200px) {
-		font-size: 14px;
-	}
+  @include min-width(1200px) {
+    font-size: 14px;
+  }
 }
 .master-card-title {
   margin-top: 8px;
@@ -170,18 +170,17 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   }
 
-	@include min-width(1025px) {
-		min-height: 650px;
-	}
+  @include min-width(1025px) {
+    min-height: 650px;
+  }
 
-	@include min-width(1200px) {
-		min-height: 600px;
-	}
+  @include min-width(1200px) {
+    min-height: 600px;
+  }
 
-	@include min-width(1440px) {
-		min-height: 650px;
-	}
-
+  @include min-width(1440px) {
+    min-height: 650px;
+  }
 
   .page {
     position: relative;
@@ -240,15 +239,15 @@
     letter-spacing: 3px;
     cursor: pointer;
 
-		@include min-width(1200px) {
-			margin-left: -1px;
-			font-size: 16px;
-		}
+    @include min-width(1200px) {
+      margin-left: -1px;
+      font-size: 16px;
+    }
 
-		@include min-width(1440px) {
-			margin-left: 0px;
-			font-size: 18px;
-		}
+    @include min-width(1440px) {
+      margin-left: 0px;
+      font-size: 18px;
+    }
   }
 
   .page-tab {
@@ -262,13 +261,13 @@
     font-size: 14px;
     @include roboto-txt;
 
-		@include min-width(1200px) {
-			width: 22px;
-		}
+    @include min-width(1200px) {
+      width: 22px;
+    }
 
-		@include min-width(1440px) {
-			width: 28px;
-		}
+    @include min-width(1440px) {
+      width: 28px;
+    }
 
     &::after {
       content: "";
@@ -290,20 +289,19 @@
     color: rgba(255, 255, 255, 0);
     overflow: hidden;
 
-		@include min-width(1025px) {
-			width: 3.2vw;
-			min-height: 650px;
-		}
+    @include min-width(1025px) {
+      width: 3.2vw;
+      min-height: 650px;
+    }
 
-		@include min-width(1200px) {
-			width: 2.2vw;
-			min-height: 600px;
-		}
-	
-		@include min-width(1440px) {
-			min-height: 650px;
-		}
-	
+    @include min-width(1200px) {
+      width: 2.2vw;
+      min-height: 600px;
+    }
+
+    @include min-width(1440px) {
+      min-height: 650px;
+    }
 
     > .page-title {
       display: inline-block;
@@ -425,11 +423,11 @@
   @include min-width(1025px) {
   }
 
-	@include min-width(1200px) {
+  @include min-width(1200px) {
     width: calc(100% - 200px);
   }
 
-	@include min-width(1440px) {
+  @include min-width(1440px) {
     width: calc(100% - 248px);
   }
 }
@@ -442,11 +440,11 @@
     padding: 20px;
   }
 
-	@include min-width(1200px) {
+  @include min-width(1200px) {
     padding: 20px 35px;
   }
 
-	@include min-width(1440px) {
+  @include min-width(1440px) {
     padding: 20px 56px;
   }
 
@@ -465,11 +463,11 @@
     font-size: 28px;
   }
 
-	@include min-width(1200px) {
+  @include min-width(1200px) {
     font-size: 26px;
   }
 
-	@include min-width(1440px) {
+  @include min-width(1440px) {
     font-size: 32px;
   }
 
@@ -499,7 +497,7 @@
     font-size: 45px;
   }
 
-	@include min-width(1440px) {
+  @include min-width(1440px) {
     font-size: 63px;
   }
 
@@ -515,15 +513,13 @@
     width: 248px;
   }
 
-	@include min-width(1200px) {
+  @include min-width(1200px) {
     width: 200px;
   }
 
-	@include min-width(1440px) {
+  @include min-width(1440px) {
     width: 248px;
   }
-
-
 
   > figure {
     height: 100%;
@@ -548,31 +544,31 @@
   justify-content: space-between;
   padding: 45px;
 
-	@include min-width(1025px) {
-		padding: 20px;
-		margin-top: 2.5rem;
-	}
+  @include min-width(1025px) {
+    padding: 20px;
+    margin-top: 2.5rem;
+  }
 
-	@include min-width(1200px) {
-		margin-top: 1.5rem;
-	}
+  @include min-width(1200px) {
+    margin-top: 1.5rem;
+  }
 
-	@include min-width(1440px) {
-		margin-top: 0;
-		padding: 45px;
-	}
+  @include min-width(1440px) {
+    margin-top: 0;
+    padding: 45px;
+  }
 }
 
 .page-collect-img {
   filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.25));
 
-	@include min-width(1025px) {
-		width: 80px;
-	}
+  @include min-width(1025px) {
+    width: 80px;
+  }
 
-	@include min-width(1200px) {
-		width: auto;
-	}
+  @include min-width(1200px) {
+    width: auto;
+  }
 }
 
 .page-content-info-bottom-info {
@@ -581,13 +577,13 @@
     font-weight: 700;
     font-size: 18px;
 
-		@include min-width(1025px) {
-			font-size: 16px;
-		}
+    @include min-width(1025px) {
+      font-size: 16px;
+    }
 
-		@include min-width(1200px) {
-			font-size: 18px;
-		}
+    @include min-width(1200px) {
+      font-size: 18px;
+    }
   }
   > span {
     display: flex;
@@ -621,7 +617,7 @@
     margin-top: 88px;
   }
 
-	@include min-width(1200px) {
+  @include min-width(1200px) {
     height: 450px;
   }
 
@@ -694,11 +690,11 @@
       font-size: 26px;
     }
 
-		@include min-width(1200px) {
+    @include min-width(1200px) {
       font-size: 30px;
     }
 
-		@include min-width(1440px) {
+    @include min-width(1440px) {
       font-size: 40px;
     }
   }
@@ -977,13 +973,13 @@
     color: $color-white;
     background-color: $color-orange-1;
 
-		@include min-width(1025px) {
-			font-size: 14px;
-		}
+    @include min-width(1025px) {
+      font-size: 14px;
+    }
 
-		@include min-width(1440px) {
-			font-size: 20px;
-		}
+    @include min-width(1440px) {
+      font-size: 20px;
+    }
 
     &:after {
       content: "";
@@ -1226,15 +1222,15 @@
       font-size: 24px;
     }
 
-		@include min-width(1200px) {
-			padding: 0 20px;
-			font-size: 24px;
-		}
+    @include min-width(1200px) {
+      padding: 0 20px;
+      font-size: 24px;
+    }
 
-		@include min-width(1440px) {
-			padding: 0 45px;
-			font-size: 28px;
-		}
+    @include min-width(1440px) {
+      padding: 0 45px;
+      font-size: 28px;
+    }
 
     &:after {
       content: "";
@@ -1252,13 +1248,13 @@
         left: 45px;
       }
 
-			@include min-width(1200px) {
-				left: 20px;
-			}
+      @include min-width(1200px) {
+        left: 20px;
+      }
 
-			@include min-width(1440px) {
-				left: 45px;
-			}
+      @include min-width(1440px) {
+        left: 45px;
+      }
     }
   }
 }
@@ -1480,6 +1476,18 @@
     color: $color-white;
     background-color: $color-orange-1;
 
+    @include min-width(1025px) {
+      flex-direction: row;
+    }
+
+    @include min-width(1200px) {
+      font-size: 13px;
+    }
+
+    @include min-width(1440px) {
+      font-size: 15px;
+    }
+
     &:after {
       content: "";
       width: 24px;
@@ -1530,6 +1538,14 @@
           .lecture-page-grid1-tab-top-title-right {
             font-weight: 400;
             font-size: 37px;
+
+            @include min-width(1200px) {
+              font-size: 30px;
+            }
+
+            @include min-width(1440px) {
+              font-size: 37px;
+            }
           }
 
           .lecture-page-grid1-tab-top-title-left-top {
@@ -1695,9 +1711,13 @@
   border-top: 1px solid $color-black;
   border-bottom: 1px solid $color-black;
 
-  @include min-width(1025px) {
-    padding: 54px;
+  @include min-width(1200px) {
+    padding: 20px;
     border-top: none;
+  }
+
+  @include min-width(1440px) {
+    padding: 54px;
   }
 
   > .lecture-page-grid2-top-tag {
@@ -1731,6 +1751,14 @@
     font-size: 28px;
     color: $color-primary-1;
     @include NotoSansTC-txt;
+
+    @include min-width(1200px) {
+      font-size: 22px;
+    }
+
+    @include min-width(1440px) {
+      font-size: 28px;
+    }
   }
 
   > span {
@@ -1746,6 +1774,14 @@
   padding: 21px;
 
   @include min-width(1025px) {
+    padding: 20px;
+  }
+
+  @include min-width(1200px) {
+    padding: 20px;
+  }
+
+  @include min-width(1440px) {
     padding: 54px;
   }
 
@@ -1893,6 +1929,19 @@
 
       > figure {
         position: relative;
+        width: 100%;
+
+        @include min-width(1440px) {
+          width: auto;
+        }
+
+        > img {
+          width: 100%;
+
+          @include min-width(1440px) {
+            width: auto;
+          }
+        }
 
         > figcaption {
           width: 100%;
@@ -1962,7 +2011,7 @@
 .lecture-page-hidden {
   display: none;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     display: flex;
   }
 }
@@ -1970,7 +2019,7 @@
 .lecture-page-hidden-m {
   display: block;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     display: none;
   }
 }
@@ -1985,7 +2034,7 @@
   position: relative;
   min-height: 68vh;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     display: flex;
   }
 }
@@ -1993,7 +2042,7 @@
 .lottery-page-left {
   width: 100%;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     width: 50%;
   }
 }
@@ -2052,10 +2101,18 @@
 
       @include min-width(1025px) {
         width: 33.33%;
-        margin-right: 70px;
+				margin-right: 100px;
         margin-bottom: 0;
         display: block;
       }
+
+			@include min-width(1200px) {
+				margin-right: 40px;
+			}
+
+			@include min-width(1440px) {
+				margin-right: 70px;
+			}
 
       &:last-child {
         margin-right: 0;
@@ -2085,6 +2142,18 @@
           font-weight: 400;
           font-size: 18px;
           color: $color-gray-6;
+
+					@include min-width(1025px) {
+						font-size: 16px;
+					}
+
+					@include min-width(1200px) {
+						font-size: 14px;
+					}
+
+					@include min-width(1440px) {
+						font-size: 18px;
+					}
         }
       }
     }
@@ -2096,7 +2165,7 @@
   margin-left: 0;
   margin-top: 70px;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     width: 50%;
     margin-left: 82px;
     margin-top: 0;
