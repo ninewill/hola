@@ -169,17 +169,22 @@
       right: 0px;
       background: url("../images/Mobile/Gift/Image.jpg") no-repeat center/contain;
 			background-position: 100%;
+			
 
       @include min-width(1025px) {
-        width: 70%;
+        width: 80%;
 				right: 0px;
-				background: url("../images/Gift/Image.png") no-repeat center/contain;
       }
+
+			@include min-width(1440px) {
+				width: 70%;
+			}
     }
   }
 
 	.left-box-bottom-bg{
 		margin-top: 39px;
+		background-color: $color-white;
 
 		@include min-width(1025px) {
 			margin-top: 0;
@@ -262,6 +267,14 @@
 
   .right-box-info {
     @include min-width(1025px) {
+      width: 300px;
+    }
+
+		@include min-width(1200px) {
+      width: 400px;
+    }
+
+		@include min-width(1400px) {
       width: 450px;
     }
 
@@ -282,7 +295,11 @@
       color: $color-primary-1;
       @include NotoSansTC-txt;
 
-			@include min-width(1025px) {
+			@include min-width(1200px) {
+				font-size: 24px;
+			}
+
+			@include min-width(1440px) {
 				font-size: 38px;
 			}
 
@@ -291,7 +308,11 @@
         font-size: 28px;
         color: $color-primary-1;
 
-				@include min-width(1025px) {
+				@include min-width(1200px) {
+					font-size: 38px;
+				}
+
+				@include min-width(1440px) {
 					font-size: 52px;
 				}
       }
@@ -304,7 +325,11 @@
       font-size: 14px;
       color: $color-primary-3;
 
-			@include min-width(1025px) {
+			@include min-width(1200px) {
+				font-size: 18px;
+			}
+
+			@include min-width(1440px) {
 				font-size: 20px;
 			}
     }
