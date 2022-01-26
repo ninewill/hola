@@ -954,7 +954,7 @@
 .student-page-pc {
   display: none;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     display: flex;
   }
 }
@@ -976,6 +976,14 @@
     font-size: 20px;
     color: $color-white;
     background-color: $color-orange-1;
+
+		@include min-width(1025px) {
+			font-size: 14px;
+		}
+
+		@include min-width(1440px) {
+			font-size: 20px;
+		}
 
     &:after {
       content: "";
@@ -1215,8 +1223,18 @@
       margin-top: 87px;
       padding: 0 45px;
       font-weight: 400;
-      font-size: 28px;
+      font-size: 24px;
     }
+
+		@include min-width(1200px) {
+			padding: 0 20px;
+			font-size: 24px;
+		}
+
+		@include min-width(1440px) {
+			padding: 0 45px;
+			font-size: 28px;
+		}
 
     &:after {
       content: "";
@@ -1233,6 +1251,14 @@
         top: -24px;
         left: 45px;
       }
+
+			@include min-width(1200px) {
+				left: 20px;
+			}
+
+			@include min-width(1440px) {
+				left: 45px;
+			}
     }
   }
 }
@@ -1413,7 +1439,7 @@
 .student-page-hidden {
   display: block;
 
-  @include min-width(1025px) {
+  @include min-width(1200px) {
     display: none;
   }
 }
