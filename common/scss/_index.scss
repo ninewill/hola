@@ -202,12 +202,12 @@
 		@include min-width(1440px) {
       width: 550px;
       padding-left: 2.5rem;
-      font-size: 28px;
+      font-size: 26px;
     }
 
 		@include min-width(1660px) {
       padding-left: 1rem;
-			font-size: 32px;
+			font-size: 28px;
     }
 
     &:before {
